@@ -11,6 +11,7 @@
         <module name="dreamshop-mapper" />
         <module name="dreamshop-pojo" />
         <module name="dreamshop-service" />
+        <module name="mybatis-generator-demo" />
       </profile>
     </annotationProcessing>
   </component>
