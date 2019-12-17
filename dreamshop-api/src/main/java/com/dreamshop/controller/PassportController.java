@@ -3,6 +3,7 @@ package com.dreamshop.controller;
 import com.dreamshop.pojo.bo.UserBO;
 import com.dreamshop.service.UserService;
 import com.dreamshop.util.DreamJSONResult;
+import io.swagger.annotations.*;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -11,12 +12,15 @@ import org.springframework.web.bind.annotation.*;
  * @author DreamHeng
  * @date 2019/12/12
  */
+@Api(value = "注册登录", tags = "用于注册登录的接口")
 @RestController
 @RequestMapping("passport")
 public class PassportController {
     @Autowired
     private UserService userService;
 
+    @ApiOperation(value = "用户名是否存在", notes = "用户名是否存在", httpMethod = "GET")
+    @ApiImplicitParam(name="username",value="用户名",dataType="String", paramType = "path", required = true)
     @GetMapping("/checkUsernameIsExist")
     public DreamJSONResult checkUsernameIsExist(@RequestParam String username){
         //1.判断用户名是否为空
@@ -31,6 +35,7 @@ public class PassportController {
         return  DreamJSONResult.ok();
     }
 
+    @ApiOperation(value = "注册用户", notes = "用户注册功能", httpMethod = "POST")
     @PostMapping("/regist")
     public DreamJSONResult regist(@RequestBody UserBO userBO){
         String username = userBO.getUsername();
