@@ -3,12 +3,17 @@ package com.dreamshop.controller;
 import com.dreamshop.pojo.Users;
 import com.dreamshop.pojo.bo.UserBO;
 import com.dreamshop.service.UserService;
+import com.dreamshop.util.CookieUtils;
 import com.dreamshop.util.DreamJSONResult;
+import com.dreamshop.util.JsonUtils;
 import io.swagger.annotations.*;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import springfox.documentation.annotations.ApiIgnore;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 
 /**
  * @author DreamHeng
@@ -44,7 +49,9 @@ public class PassportController {
             @ApiImplicitParam(name = "confirmPassword", value = "确认密码", dataType = "String", paramType = "body", required = true)
     })
     @PostMapping("/regist")
-    public DreamJSONResult regist(@ApiIgnore @RequestBody UserBO userBO){
+    public DreamJSONResult regist(@ApiIgnore @RequestBody UserBO userBO,
+                                  HttpServletRequest request,
+                                  HttpServletResponse response){
         String username = userBO.getUsername();
         String password = userBO.getPassword();
         String confirmPassword = userBO.getConfirmPassword();
@@ -68,7 +75,10 @@ public class PassportController {
             return DreamJSONResult.errorMsg("密码长度小于6");
         }
 
-        userService.createUser(userBO);
+        Users user = userService.createUser(userBO);
+
+        CookieUtils.setCookie(request,response,"user",
+                JsonUtils.objectToJson(setNullProperty(user)),true);
 
         return DreamJSONResult.ok();
     }
@@ -79,7 +89,9 @@ public class PassportController {
             @ApiImplicitParam(name = "password", value = "密码", dataType = "String", paramType = "body", required = true)
     })
     @PostMapping("/login")
-    public DreamJSONResult login(@ApiIgnore@RequestBody UserBO userBO){
+    public DreamJSONResult login(@ApiIgnore@RequestBody UserBO userBO,
+                                 HttpServletRequest request,
+                                 HttpServletResponse response){
         String username = userBO.getUsername();
         String password = userBO.getPassword();
 
@@ -94,6 +106,20 @@ public class PassportController {
         if(user == null){
             return DreamJSONResult.errorMsg("用户名或密码错误");
         }
+
+        CookieUtils.setCookie(request,response,"user",
+                JsonUtils.objectToJson(setNullProperty(user)),true);
+
         return DreamJSONResult.ok(user);
+    }
+
+    private Users setNullProperty(Users userResult){
+        userResult.setPassword(null);
+        userResult.setEmail(null);
+        userResult.setMobile(null);
+        userResult.setBirthday(null);
+        userResult.setCreatedTime(null);
+        userResult.setUpdatedTime(null);
+        return userResult;
     }
 }
