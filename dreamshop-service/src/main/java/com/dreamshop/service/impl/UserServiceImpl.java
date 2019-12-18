@@ -73,4 +73,19 @@ public class UserServiceImpl implements UserService {
 
         return user;
     }
+
+    @Override
+    public Users checkUsernameForLogin(String username, String password) {
+        Example userExample = new Example(Users.class);
+        Example.Criteria criteria = userExample.createCriteria();
+        criteria.andEqualTo("username",username);
+        try {
+            criteria.andEqualTo("password",MD5Utils.getMD5Str(password));
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        Users user = usersMapper.selectOneByExample(userExample);
+
+        return user;
+    }
 }

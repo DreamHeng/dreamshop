@@ -24,4 +24,12 @@ public interface UserService {
      * @return
      */
     Users createUser(UserBO userBO);
+
+    /**
+     * function: 检查用户名密码，用来登录
+     * @param username
+     * @param password
+     * @return
+     */
+    Users checkUsernameForLogin(String username,String password);
 }

@@ -1,5 +1,6 @@
 package com.dreamshop.controller;
 
+import com.dreamshop.pojo.Users;
 import com.dreamshop.pojo.bo.UserBO;
 import com.dreamshop.service.UserService;
 import com.dreamshop.util.DreamJSONResult;
@@ -7,6 +8,7 @@ import io.swagger.annotations.*;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
+import springfox.documentation.annotations.ApiIgnore;
 
 /**
  * @author DreamHeng
@@ -36,8 +38,13 @@ public class PassportController {
     }
 
     @ApiOperation(value = "注册用户", notes = "用户注册功能", httpMethod = "POST")
+    @ApiImplicitParams({
+            @ApiImplicitParam(name = "username", value = "用户名", dataType = "String", paramType = "body", required = true),
+            @ApiImplicitParam(name = "password", value = "密码", dataType = "String", paramType = "body", required = true),
+            @ApiImplicitParam(name = "confirmPassword", value = "确认密码", dataType = "String", paramType = "body", required = true)
+    })
     @PostMapping("/regist")
-    public DreamJSONResult regist(@RequestBody UserBO userBO){
+    public DreamJSONResult regist(@ApiIgnore @RequestBody UserBO userBO){
         String username = userBO.getUsername();
         String password = userBO.getPassword();
         String confirmPassword = userBO.getConfirmPassword();
@@ -64,5 +71,29 @@ public class PassportController {
         userService.createUser(userBO);
 
         return DreamJSONResult.ok();
+    }
+
+    @ApiOperation(value = "用户登录", notes = "用户登录功能", httpMethod = "POST")
+    @ApiImplicitParams({
+            @ApiImplicitParam(name = "username", value = "用户名", dataType = "String", paramType = "body", required = true),
+            @ApiImplicitParam(name = "password", value = "密码", dataType = "String", paramType = "body", required = true)
+    })
+    @PostMapping("/login")
+    public DreamJSONResult login(@ApiIgnore@RequestBody UserBO userBO){
+        String username = userBO.getUsername();
+        String password = userBO.getPassword();
+
+        //0.检查用户名、密码、确认密码不为空
+        if(StringUtils.isBlank(username) ||
+                StringUtils.isBlank(password)){
+            return DreamJSONResult.errorMsg("用户名或密码不能为空");
+        }
+
+        //1.调用用户登录服务
+        Users user = userService.checkUsernameForLogin(username, password);
+        if(user == null){
+            return DreamJSONResult.errorMsg("用户名或密码错误");
+        }
+        return DreamJSONResult.ok(user);
     }
 }
