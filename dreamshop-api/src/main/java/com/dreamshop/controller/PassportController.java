@@ -113,6 +113,18 @@ public class PassportController {
         return DreamJSONResult.ok(user);
     }
 
+    @ApiOperation(value = "用户注销", notes = "用户退出功能", httpMethod = "POST")
+    @ApiImplicitParam(name="userId",value="用户id",dataType="String", paramType = "path", required = true)
+    @PostMapping("/logout")
+    public DreamJSONResult logout(@RequestParam String userId,
+                                 HttpServletRequest request,
+                                 HttpServletResponse response){
+
+        CookieUtils.deleteCookie(request,response,"user");
+
+        return DreamJSONResult.ok();
+    }
+
     private Users setNullProperty(Users userResult){
         userResult.setPassword(null);
         userResult.setEmail(null);
