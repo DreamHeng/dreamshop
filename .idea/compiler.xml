@@ -6,13 +6,23 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="dreamshop-api" />
-        <module name="dreamshop-common" />
-        <module name="dreamshop-mapper" />
-        <module name="dreamshop-pojo" />
-        <module name="dreamshop-service" />
         <module name="mybatis-generator-demo" />
+        <module name="dreamshop-api" />
+        <module name="dreamshop-mapper" />
+        <module name="dreamshop-service" />
+        <module name="dreamshop-pojo" />
+        <module name="dreamshop-common" />
       </profile>
     </annotationProcessing>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="dreamshop-api" options="-parameters" />
+      <module name="dreamshop-common" options="-parameters" />
+      <module name="dreamshop-mapper" options="-parameters" />
+      <module name="dreamshop-pojo" options="-parameters" />
+      <module name="dreamshop-service" options="-parameters" />
+      <module name="mybatis-generator-demo" options="-parameters" />
+    </option>
   </component>
 </project>

@@ -19,7 +19,7 @@ import javax.servlet.http.HttpServletResponse;
  * @author DreamHeng
  * @date 2019/12/12
  */
-@Api(value = "注册登录", tags = "用于注册登录的接口")
+@Api(value = "注册登录", tags = "用于注册登录的接口类")
 @RestController
 @RequestMapping("passport")
 public class PassportController {
