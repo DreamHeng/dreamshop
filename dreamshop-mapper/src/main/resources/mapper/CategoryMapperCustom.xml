@@ -18,6 +18,20 @@
       <result column="subFatherId" property="subFatherId" />
     </collection>
   </resultMap>
+
+    <resultMap id="itemUrl" type="com.dreamshop.pojo.vo.NewItemsVO" >
+        <id column="rootCatId" property="rootCatId" />
+        <result column="rootCatName" property="rootCatName" />
+        <result column="slogan" property="slogan" />
+        <result column="catImage" property="catImage" />
+        <result column="bgColor" property="bgColor" />
+        <collection property="simpleItemList" ofType="com.dreamshop.pojo.vo.SimpleItemVO">
+            <result column="itemId" property="itemId" />
+            <result column="itemName" property="itemName" />
+            <result column="itemUrl" property="itemUrl" />
+        </collection>
+    </resultMap>
+
   <select id="getSubCatList" parameterType="int" resultMap="myCategoryVO">
     SELECT
         f.id as id,
@@ -38,5 +52,32 @@
         f.father_id = #{rootCatId}
   </select>
 
+  <select id="getSixNewItemsLazy" parameterType="Map" resultMap="itemUrl">
+    SELECT
+	    f.id AS rootCatId,
+	    f.`name` AS `rootCatName`,
+	    f.slogan AS slogan,
+	    f.cat_image AS catImage,
+	    f.bg_color AS bgColor,
+	    c.id AS itemId,
+	    c.`item_name` AS itemName,
+	    cc.url AS itemUrl
+    FROM
+	    category f
+    LEFT JOIN
+        items c
+    ON
+        f.id = c.root_cat_id
+    LEFT JOIN
+        items_img cc
+    ON
+        c.id = cc.item_id
+    WHERE
+	    f.id = #{paramMap.rootCatId}
+	ORDER BY
+	    c.created_time
+    LIMIT
+        0,6
+  </select>
 
 </mapper>

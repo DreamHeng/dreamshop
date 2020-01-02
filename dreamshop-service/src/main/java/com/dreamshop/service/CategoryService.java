@@ -2,6 +2,7 @@ package com.dreamshop.service;
 
 import com.dreamshop.pojo.Category;
 import com.dreamshop.pojo.vo.CategoryVO;
+import com.dreamshop.pojo.vo.NewItemsVO;
 
 import java.util.List;
 
@@ -18,10 +19,17 @@ public interface CategoryService {
     List<Category> queryAllRootLevelCat();
 
     /**
-     * function:分局一级分类id查询子分类信息
+     * function:根据一级分类id查询子分类信息
      * @param rootCatId
      * @return
      */
     List<CategoryVO> getSubCatList(Integer rootCatId);
+
+    /**
+     * function:根据以及分类id获取其下最新六个商品的简单信息
+     * @param rootCatId
+     * @return
+     */
+    List<NewItemsVO> getSixNewItemsLazy(Integer rootCatId);
 
 }
