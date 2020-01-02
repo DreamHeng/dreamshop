@@ -1,466 +1,57 @@
-2020-01-02 21:14:18 INFO  Version:21 - HV000001: Hibernate Validator 6.0.16.Final
-2020-01-02 21:14:19 INFO  Application:50 - Starting Application on DESKTOP-9TJGKIL with PID 15048 (F:\study\project\dreamshop\dreamshop-api\target\classes started by DreamHeng in F:\study\project\dreamshop)
-2020-01-02 21:14:19 INFO  Application:679 - The following profiles are active: dev
-2020-01-02 21:14:23 WARN  ClassPathMapperScanner:44 - No MyBatis mapper was found in '[com.dreamshop]' package. Please check your configuration.
-2020-01-02 21:14:23 INFO  PostProcessorRegistrationDelegate$BeanPostProcessorChecker:330 - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$d295b9fe] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2020-01-02 21:14:24 INFO  TomcatWebServer:90 - Tomcat initialized with port(s): 8888 (http)
-2020-01-02 21:14:24 INFO  ContextLoader:296 - Root WebApplicationContext: initialization completed in 4638 ms
-2020-01-02 21:14:29 INFO  ThreadPoolTaskExecutor:171 - Initializing ExecutorService 'applicationTaskExecutor'
-2020-01-02 21:14:29 INFO  MapperCacheDisabler:60 - Clear tk.mybatis.mapper.util.MsUtil CLASS_CACHE cache.
-2020-01-02 21:14:29 INFO  MapperCacheDisabler:60 - Clear tk.mybatis.mapper.genid.GenIdUtil CACHE cache.
-2020-01-02 21:14:29 INFO  MapperCacheDisabler:60 - Clear tk.mybatis.mapper.version.VersionUtil CACHE cache.
-2020-01-02 21:14:29 INFO  MapperCacheDisabler:83 - Clear EntityHelper entityTableMap cache.
-2020-01-02 21:14:29 INFO  DocumentationPluginsBootstrapper:84 - Context refreshed
-2020-01-02 21:14:29 INFO  DocumentationPluginsBootstrapper:87 - Found 1 custom documentation plugin(s)
-2020-01-02 21:14:29 INFO  ApiListingReferenceScanner:44 - Scanning for api listing references
-2020-01-02 21:14:29 INFO  CachingOperationNameGenerator:40 - Generating unique operation named: catsUsingGET_1
-2020-01-02 21:14:29 WARN  OperationImplicitParameterReader:88 - Coercing to be of type string. This may not even be a scalar type in actuality
-2020-01-02 21:14:29 WARN  OperationImplicitParameterReader:88 - Coercing to be of type string. This may not even be a scalar type in actuality
-2020-01-02 21:14:29 WARN  OperationImplicitParameterReader:88 - Coercing to be of type string. This may not even be a scalar type in actuality
-2020-01-02 21:14:29 WARN  OperationImplicitParameterReader:88 - Coercing to be of type string. This may not even be a scalar type in actuality
-2020-01-02 21:14:29 WARN  OperationImplicitParameterReader:88 - Coercing to be of type string. This may not even be a scalar type in actuality
-2020-01-02 21:14:29 WARN  OperationImplicitParameterReader:88 - Coercing to be of type string. This may not even be a scalar type in actuality
-2020-01-02 21:14:29 WARN  OperationImplicitParameterReader:88 - Coercing to be of type string. This may not even be a scalar type in actuality
-2020-01-02 21:14:30 INFO  TomcatWebServer:204 - Tomcat started on port(s): 8888 (http) with context path ''
-2020-01-02 21:14:30 INFO  Application:59 - Started Application in 12.242 seconds (JVM running for 14.852)
-2020-01-02 21:14:39 INFO  DispatcherServlet:524 - Initializing Servlet 'dispatcherServlet'
-2020-01-02 21:14:39 INFO  DispatcherServlet:546 - Completed initialization in 15 ms
-2020-01-02 21:14:39 INFO  ServiceLogAspect:37 - ====== 开始执行 class com.dreamshop.service.impl.UserServiceImpl.checkUsernameForLogin ======
-2020-01-02 21:14:39 INFO  HikariDataSource:110 - DateSourceHikariCP - Starting...
-2020-01-02 21:14:39 INFO  HikariDataSource:123 - DateSourceHikariCP - Start completed.
-2020-01-02 21:14:39 INFO  ServiceLogAspect:55 - ====== 执行结束，耗时：371 毫秒 ======
-2020-01-02 21:14:39 INFO  CookieUtils:210 - ========== domainName: localhost ==========
-2020-01-02 21:14:40 INFO  ServiceLogAspect:37 - ====== 开始执行 class com.dreamshop.service.impl.CarouselServiceImpl.queryAll ======
-2020-01-02 21:14:40 INFO  ServiceLogAspect:37 - ====== 开始执行 class com.dreamshop.service.impl.CategoryServiceImpl.queryAllRootLevelCat ======
-2020-01-02 21:14:40 INFO  ServiceLogAspect:55 - ====== 执行结束，耗时：13 毫秒 ======
-2020-01-02 21:14:40 INFO  ServiceLogAspect:55 - ====== 执行结束，耗时：52 毫秒 ======
-2020-01-02 21:14:40 INFO  ServiceLogAspect:37 - ====== 开始执行 class com.dreamshop.service.impl.CategoryServiceImpl.getSixNewItemsLazy ======
-2020-01-02 21:14:40 INFO  ServiceLogAspect:55 - ====== 执行结束，耗时：9 毫秒 ======
-2020-01-02 21:14:41 INFO  ServiceLogAspect:37 - ====== 开始执行 class com.dreamshop.service.impl.CategoryServiceImpl.getSubCatList ======
-2020-01-02 21:14:41 INFO  ServiceLogAspect:55 - ====== 执行结束，耗时：7 毫秒 ======
-2020-01-02 21:14:41 INFO  ServiceLogAspect:37 - ====== 开始执行 class com.dreamshop.service.impl.CategoryServiceImpl.getSubCatList ======
-2020-01-02 21:14:41 INFO  ServiceLogAspect:55 - ====== 执行结束，耗时：10 毫秒 ======
-2020-01-02 21:14:41 INFO  ServiceLogAspect:37 - ====== 开始执行 class com.dreamshop.service.impl.CategoryServiceImpl.getSubCatList ======
-2020-01-02 21:14:41 INFO  ServiceLogAspect:55 - ====== 执行结束，耗时：8 毫秒 ======
-2020-01-02 21:14:41 INFO  ServiceLogAspect:37 - ====== 开始执行 class com.dreamshop.service.impl.CategoryServiceImpl.getSubCatList ======
-2020-01-02 21:14:41 INFO  ServiceLogAspect:55 - ====== 执行结束，耗时：7 毫秒 ======
-2020-01-02 21:14:41 INFO  ServiceLogAspect:37 - ====== 开始执行 class com.dreamshop.service.impl.CategoryServiceImpl.getSubCatList ======
-2020-01-02 21:14:41 INFO  ServiceLogAspect:55 - ====== 执行结束，耗时：8 毫秒 ======
-2020-01-02 21:14:42 INFO  ServiceLogAspect:37 - ====== 开始执行 class com.dreamshop.service.impl.CategoryServiceImpl.getSubCatList ======
-2020-01-02 21:14:42 INFO  ServiceLogAspect:55 - ====== 执行结束，耗时：4 毫秒 ======
-2020-01-02 21:14:42 INFO  ServiceLogAspect:37 - ====== 开始执行 class com.dreamshop.service.impl.CategoryServiceImpl.getSubCatList ======
-2020-01-02 21:14:42 INFO  ServiceLogAspect:55 - ====== 执行结束，耗时：4 毫秒 ======
-2020-01-02 21:14:42 INFO  ServiceLogAspect:37 - ====== 开始执行 class com.dreamshop.service.impl.CategoryServiceImpl.getSixNewItemsLazy ======
-2020-01-02 21:14:42 INFO  ServiceLogAspect:55 - ====== 执行结束，耗时：5 毫秒 ======
-2020-01-02 21:14:42 INFO  ServiceLogAspect:37 - ====== 开始执行 class com.dreamshop.service.impl.CategoryServiceImpl.getSixNewItemsLazy ======
-2020-01-02 21:14:42 INFO  ServiceLogAspect:55 - ====== 执行结束，耗时：6 毫秒 ======
-2020-01-02 21:14:42 INFO  ServiceLogAspect:37 - ====== 开始执行 class com.dreamshop.service.impl.CategoryServiceImpl.getSixNewItemsLazy ======
-2020-01-02 21:14:42 INFO  ServiceLogAspect:55 - ====== 执行结束，耗时：6 毫秒 ======
-2020-01-02 21:14:42 INFO  ServiceLogAspect:37 - ====== 开始执行 class com.dreamshop.service.impl.CategoryServiceImpl.getSixNewItemsLazy ======
-2020-01-02 21:14:42 INFO  ServiceLogAspect:55 - ====== 执行结束，耗时：4 毫秒 ======
-2020-01-02 21:14:42 INFO  ServiceLogAspect:37 - ====== 开始执行 class com.dreamshop.service.impl.CategoryServiceImpl.getSixNewItemsLazy ======
-2020-01-02 21:14:42 INFO  ServiceLogAspect:55 - ====== 执行结束，耗时：10 毫秒 ======
-2020-01-02 21:14:42 INFO  ServiceLogAspect:37 - ====== 开始执行 class com.dreamshop.service.impl.CategoryServiceImpl.getSixNewItemsLazy ======
-2020-01-02 21:14:42 INFO  ServiceLogAspect:55 - ====== 执行结束，耗时：9 毫秒 ======
-2020-01-02 21:14:42 INFO  ServiceLogAspect:37 - ====== 开始执行 class com.dreamshop.service.impl.CategoryServiceImpl.getSixNewItemsLazy ======
-2020-01-02 21:14:42 INFO  ServiceLogAspect:55 - ====== 执行结束，耗时：5 毫秒 ======
-2020-01-02 21:14:42 INFO  ServiceLogAspect:37 - ====== 开始执行 class com.dreamshop.service.impl.CategoryServiceImpl.getSixNewItemsLazy ======
-2020-01-02 21:14:42 INFO  ServiceLogAspect:55 - ====== 执行结束，耗时：5 毫秒 ======
-2020-01-02 21:14:42 INFO  ServiceLogAspect:37 - ====== 开始执行 class com.dreamshop.service.impl.CategoryServiceImpl.getSixNewItemsLazy ======
-2020-01-02 21:14:42 INFO  ServiceLogAspect:55 - ====== 执行结束，耗时：7 毫秒 ======
-2020-01-02 21:14:42 INFO  ServiceLogAspect:37 - ====== 开始执行 class com.dreamshop.service.impl.CategoryServiceImpl.getSubCatList ======
-2020-01-02 21:14:42 INFO  ServiceLogAspect:55 - ====== 执行结束，耗时：2 毫秒 ======
-2020-01-02 21:14:55 INFO  ServiceLogAspect:37 - ====== 开始执行 class com.dreamshop.service.impl.CarouselServiceImpl.queryAll ======
-2020-01-02 21:14:55 INFO  ServiceLogAspect:37 - ====== 开始执行 class com.dreamshop.service.impl.CategoryServiceImpl.queryAllRootLevelCat ======
-2020-01-02 21:14:55 INFO  ServiceLogAspect:55 - ====== 执行结束，耗时：8 毫秒 ======
-2020-01-02 21:14:55 INFO  ServiceLogAspect:55 - ====== 执行结束，耗时：8 毫秒 ======
-2020-01-02 21:14:55 INFO  ServiceLogAspect:37 - ====== 开始执行 class com.dreamshop.service.impl.CategoryServiceImpl.getSixNewItemsLazy ======
-2020-01-02 21:14:55 INFO  ServiceLogAspect:55 - ====== 执行结束，耗时：5 毫秒 ======
-2020-01-02 21:14:59 INFO  ServiceLogAspect:37 - ====== 开始执行 class com.dreamshop.service.impl.CarouselServiceImpl.queryAll ======
-2020-01-02 21:14:59 INFO  ServiceLogAspect:37 - ====== 开始执行 class com.dreamshop.service.impl.CategoryServiceImpl.queryAllRootLevelCat ======
-2020-01-02 21:14:59 INFO  ServiceLogAspect:55 - ====== 执行结束，耗时：8 毫秒 ======
-2020-01-02 21:14:59 INFO  ServiceLogAspect:55 - ====== 执行结束，耗时：10 毫秒 ======
-2020-01-02 21:14:59 INFO  ServiceLogAspect:37 - ====== 开始执行 class com.dreamshop.service.impl.CategoryServiceImpl.getSixNewItemsLazy ======
-2020-01-02 21:14:59 INFO  ServiceLogAspect:55 - ====== 执行结束，耗时：5 毫秒 ======
-2020-01-02 21:15:00 INFO  ServiceLogAspect:37 - ====== 开始执行 class com.dreamshop.service.impl.CategoryServiceImpl.getSubCatList ======
-2020-01-02 21:15:00 INFO  ServiceLogAspect:55 - ====== 执行结束，耗时：4 毫秒 ======
-2020-01-02 21:15:00 INFO  ServiceLogAspect:37 - ====== 开始执行 class com.dreamshop.service.impl.CategoryServiceImpl.getSixNewItemsLazy ======
-2020-01-02 21:15:00 INFO  ServiceLogAspect:55 - ====== 执行结束，耗时：10 毫秒 ======
-2020-01-02 21:15:00 INFO  ServiceLogAspect:37 - ====== 开始执行 class com.dreamshop.service.impl.CategoryServiceImpl.getSixNewItemsLazy ======
-2020-01-02 21:15:00 INFO  ServiceLogAspect:55 - ====== 执行结束，耗时：8 毫秒 ======
-2020-01-02 21:15:00 INFO  ServiceLogAspect:37 - ====== 开始执行 class com.dreamshop.service.impl.CategoryServiceImpl.getSixNewItemsLazy ======
-2020-01-02 21:15:00 INFO  ServiceLogAspect:55 - ====== 执行结束，耗时：12 毫秒 ======
-2020-01-02 21:15:00 INFO  ServiceLogAspect:37 - ====== 开始执行 class com.dreamshop.service.impl.CategoryServiceImpl.getSixNewItemsLazy ======
-2020-01-02 21:15:00 INFO  ServiceLogAspect:55 - ====== 执行结束，耗时：11 毫秒 ======
-2020-01-02 21:15:00 INFO  ServiceLogAspect:37 - ====== 开始执行 class com.dreamshop.service.impl.CategoryServiceImpl.getSixNewItemsLazy ======
-2020-01-02 21:15:00 INFO  ServiceLogAspect:55 - ====== 执行结束，耗时：16 毫秒 ======
-2020-01-02 21:15:00 INFO  ServiceLogAspect:37 - ====== 开始执行 class com.dreamshop.service.impl.CategoryServiceImpl.getSixNewItemsLazy ======
-2020-01-02 21:15:00 INFO  ServiceLogAspect:55 - ====== 执行结束，耗时：11 毫秒 ======
-2020-01-02 21:15:00 INFO  ServiceLogAspect:37 - ====== 开始执行 class com.dreamshop.service.impl.CategoryServiceImpl.getSixNewItemsLazy ======
-2020-01-02 21:15:00 INFO  ServiceLogAspect:37 - ====== 开始执行 class com.dreamshop.service.impl.CategoryServiceImpl.getSixNewItemsLazy ======
-2020-01-02 21:15:00 INFO  ServiceLogAspect:55 - ====== 执行结束，耗时：6 毫秒 ======
-2020-01-02 21:15:00 INFO  ServiceLogAspect:55 - ====== 执行结束，耗时：12 毫秒 ======
-2020-01-02 21:15:00 INFO  ServiceLogAspect:37 - ====== 开始执行 class com.dreamshop.service.impl.CategoryServiceImpl.getSixNewItemsLazy ======
-2020-01-02 21:15:00 INFO  ServiceLogAspect:55 - ====== 执行结束，耗时：11 毫秒 ======
-2020-01-02 21:15:25 INFO  ServiceLogAspect:37 - ====== 开始执行 class com.dreamshop.service.impl.CarouselServiceImpl.queryAll ======
-2020-01-02 21:15:25 INFO  ServiceLogAspect:37 - ====== 开始执行 class com.dreamshop.service.impl.CategoryServiceImpl.queryAllRootLevelCat ======
-2020-01-02 21:15:25 INFO  ServiceLogAspect:55 - ====== 执行结束，耗时：4 毫秒 ======
-2020-01-02 21:15:25 INFO  ServiceLogAspect:55 - ====== 执行结束，耗时：8 毫秒 ======
-2020-01-02 21:15:25 INFO  ServiceLogAspect:37 - ====== 开始执行 class com.dreamshop.service.impl.CategoryServiceImpl.getSixNewItemsLazy ======
-2020-01-02 21:15:25 INFO  ServiceLogAspect:55 - ====== 执行结束，耗时：6 毫秒 ======
-2020-01-02 21:16:01 INFO  ServiceLogAspect:37 - ====== 开始执行 class com.dreamshop.service.impl.CarouselServiceImpl.queryAll ======
-2020-01-02 21:16:01 INFO  ServiceLogAspect:37 - ====== 开始执行 class com.dreamshop.service.impl.CategoryServiceImpl.queryAllRootLevelCat ======
-2020-01-02 21:16:01 INFO  ServiceLogAspect:55 - ====== 执行结束，耗时：4 毫秒 ======
-2020-01-02 21:16:01 INFO  ServiceLogAspect:55 - ====== 执行结束，耗时：5 毫秒 ======
-2020-01-02 21:16:01 INFO  ServiceLogAspect:37 - ====== 开始执行 class com.dreamshop.service.impl.CategoryServiceImpl.getSixNewItemsLazy ======
-2020-01-02 21:16:01 INFO  ServiceLogAspect:55 - ====== 执行结束，耗时：8 毫秒 ======
-2020-01-02 21:17:43 INFO  Version:21 - HV000001: Hibernate Validator 6.0.16.Final
-2020-01-02 21:17:43 INFO  Application:50 - Starting Application on DESKTOP-9TJGKIL with PID 11084 (F:\study\project\dreamshop\dreamshop-api\target\classes started by DreamHeng in F:\study\project\dreamshop)
-2020-01-02 21:17:43 INFO  Application:679 - The following profiles are active: dev
-2020-01-02 21:17:45 WARN  ClassPathMapperScanner:44 - No MyBatis mapper was found in '[com.dreamshop]' package. Please check your configuration.
-2020-01-02 21:17:45 INFO  PostProcessorRegistrationDelegate$BeanPostProcessorChecker:330 - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$f5ffa0dc] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2020-01-02 21:17:45 INFO  TomcatWebServer:90 - Tomcat initialized with port(s): 8888 (http)
-2020-01-02 21:17:46 INFO  ContextLoader:296 - Root WebApplicationContext: initialization completed in 2382 ms
-2020-01-02 21:17:48 INFO  ThreadPoolTaskExecutor:171 - Initializing ExecutorService 'applicationTaskExecutor'
-2020-01-02 21:17:48 INFO  MapperCacheDisabler:60 - Clear tk.mybatis.mapper.util.MsUtil CLASS_CACHE cache.
-2020-01-02 21:17:48 INFO  MapperCacheDisabler:60 - Clear tk.mybatis.mapper.genid.GenIdUtil CACHE cache.
-2020-01-02 21:17:48 INFO  MapperCacheDisabler:60 - Clear tk.mybatis.mapper.version.VersionUtil CACHE cache.
-2020-01-02 21:17:48 INFO  MapperCacheDisabler:83 - Clear EntityHelper entityTableMap cache.
-2020-01-02 21:17:48 INFO  DocumentationPluginsBootstrapper:84 - Context refreshed
-2020-01-02 21:17:48 INFO  DocumentationPluginsBootstrapper:87 - Found 1 custom documentation plugin(s)
-2020-01-02 21:17:48 INFO  ApiListingReferenceScanner:44 - Scanning for api listing references
-2020-01-02 21:17:49 INFO  CachingOperationNameGenerator:40 - Generating unique operation named: catsUsingGET_1
-2020-01-02 21:17:49 WARN  OperationImplicitParameterReader:88 - Coercing to be of type string. This may not even be a scalar type in actuality
-2020-01-02 21:17:49 WARN  OperationImplicitParameterReader:88 - Coercing to be of type string. This may not even be a scalar type in actuality
-2020-01-02 21:17:49 WARN  OperationImplicitParameterReader:88 - Coercing to be of type string. This may not even be a scalar type in actuality
-2020-01-02 21:17:49 WARN  OperationImplicitParameterReader:88 - Coercing to be of type string. This may not even be a scalar type in actuality
-2020-01-02 21:17:49 WARN  OperationImplicitParameterReader:88 - Coercing to be of type string. This may not even be a scalar type in actuality
-2020-01-02 21:17:49 WARN  OperationImplicitParameterReader:88 - Coercing to be of type string. This may not even be a scalar type in actuality
-2020-01-02 21:17:49 WARN  OperationImplicitParameterReader:88 - Coercing to be of type string. This may not even be a scalar type in actuality
-2020-01-02 21:17:49 INFO  TomcatWebServer:204 - Tomcat started on port(s): 8888 (http) with context path ''
-2020-01-02 21:17:49 INFO  Application:59 - Started Application in 6.306 seconds (JVM running for 9.542)
-2020-01-02 21:17:57 INFO  DispatcherServlet:524 - Initializing Servlet 'dispatcherServlet'
-2020-01-02 21:17:57 INFO  DispatcherServlet:546 - Completed initialization in 19 ms
-2020-01-02 21:18:42 INFO  ServiceLogAspect:37 - ====== 开始执行 class com.dreamshop.service.impl.CategoryServiceImpl.getSixNewItemsLazy ======
-2020-01-02 21:18:43 INFO  HikariDataSource:110 - DateSourceHikariCP - Starting...
-2020-01-02 21:18:43 INFO  HikariDataSource:123 - DateSourceHikariCP - Start completed.
-2020-01-02 21:18:44 INFO  ServiceLogAspect:55 - ====== 执行结束，耗时：1258 毫秒 ======
-2020-01-02 21:19:49 INFO  ServiceLogAspect:37 - ====== 开始执行 class com.dreamshop.service.impl.CategoryServiceImpl.getSixNewItemsLazy ======
-2020-01-02 21:19:49 INFO  ServiceLogAspect:55 - ====== 执行结束，耗时：30 毫秒 ======
-2020-01-02 21:20:52 INFO  ThreadPoolTaskExecutor:208 - Shutting down ExecutorService 'applicationTaskExecutor'
-2020-01-02 21:20:52 INFO  HikariDataSource:350 - DateSourceHikariCP - Shutdown initiated...
-2020-01-02 21:20:52 INFO  HikariDataSource:352 - DateSourceHikariCP - Shutdown completed.
-2020-01-02 21:21:37 INFO  Version:21 - HV000001: Hibernate Validator 6.0.16.Final
-2020-01-02 21:21:37 INFO  Application:50 - Starting Application on DESKTOP-9TJGKIL with PID 7488 (F:\study\project\dreamshop\dreamshop-api\target\classes started by DreamHeng in F:\study\project\dreamshop)
-2020-01-02 21:21:37 INFO  Application:679 - The following profiles are active: dev
-2020-01-02 21:21:38 WARN  ClassPathMapperScanner:44 - No MyBatis mapper was found in '[com.dreamshop]' package. Please check your configuration.
-2020-01-02 21:21:38 INFO  PostProcessorRegistrationDelegate$BeanPostProcessorChecker:330 - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$4d4c97bd] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2020-01-02 21:21:39 INFO  TomcatWebServer:90 - Tomcat initialized with port(s): 8888 (http)
-2020-01-02 21:21:39 INFO  ContextLoader:296 - Root WebApplicationContext: initialization completed in 1990 ms
-2020-01-02 21:21:41 INFO  ThreadPoolTaskExecutor:171 - Initializing ExecutorService 'applicationTaskExecutor'
-2020-01-02 21:21:41 INFO  MapperCacheDisabler:60 - Clear tk.mybatis.mapper.util.MsUtil CLASS_CACHE cache.
-2020-01-02 21:21:41 INFO  MapperCacheDisabler:60 - Clear tk.mybatis.mapper.genid.GenIdUtil CACHE cache.
-2020-01-02 21:21:41 INFO  MapperCacheDisabler:60 - Clear tk.mybatis.mapper.version.VersionUtil CACHE cache.
-2020-01-02 21:21:41 INFO  MapperCacheDisabler:83 - Clear EntityHelper entityTableMap cache.
-2020-01-02 21:21:41 INFO  DocumentationPluginsBootstrapper:84 - Context refreshed
-2020-01-02 21:21:41 INFO  DocumentationPluginsBootstrapper:87 - Found 1 custom documentation plugin(s)
-2020-01-02 21:21:41 INFO  ApiListingReferenceScanner:44 - Scanning for api listing references
-2020-01-02 21:21:42 INFO  CachingOperationNameGenerator:40 - Generating unique operation named: catsUsingGET_1
-2020-01-02 21:21:42 WARN  OperationImplicitParameterReader:88 - Coercing to be of type string. This may not even be a scalar type in actuality
-2020-01-02 21:21:42 WARN  OperationImplicitParameterReader:88 - Coercing to be of type string. This may not even be a scalar type in actuality
-2020-01-02 21:21:42 WARN  OperationImplicitParameterReader:88 - Coercing to be of type string. This may not even be a scalar type in actuality
-2020-01-02 21:21:42 WARN  OperationImplicitParameterReader:88 - Coercing to be of type string. This may not even be a scalar type in actuality
-2020-01-02 21:21:42 WARN  OperationImplicitParameterReader:88 - Coercing to be of type string. This may not even be a scalar type in actuality
-2020-01-02 21:21:42 WARN  OperationImplicitParameterReader:88 - Coercing to be of type string. This may not even be a scalar type in actuality
-2020-01-02 21:21:42 WARN  OperationImplicitParameterReader:88 - Coercing to be of type string. This may not even be a scalar type in actuality
-2020-01-02 21:21:42 INFO  TomcatWebServer:204 - Tomcat started on port(s): 8888 (http) with context path ''
-2020-01-02 21:21:42 INFO  Application:59 - Started Application in 5.351 seconds (JVM running for 6.761)
-2020-01-02 21:21:46 INFO  DispatcherServlet:524 - Initializing Servlet 'dispatcherServlet'
-2020-01-02 21:21:46 INFO  DispatcherServlet:546 - Completed initialization in 20 ms
-2020-01-02 21:21:46 INFO  ServiceLogAspect:37 - ====== 开始执行 class com.dreamshop.service.impl.CategoryServiceImpl.getSixNewItemsLazy ======
-2020-01-02 21:21:46 INFO  HikariDataSource:110 - DateSourceHikariCP - Starting...
-2020-01-02 21:21:46 INFO  HikariDataSource:123 - DateSourceHikariCP - Start completed.
-2020-01-02 21:21:46 INFO  ServiceLogAspect:55 - ====== 执行结束，耗时：271 毫秒 ======
-2020-01-02 21:21:50 INFO  ServiceLogAspect:37 - ====== 开始执行 class com.dreamshop.service.impl.CategoryServiceImpl.queryAllRootLevelCat ======
-2020-01-02 21:21:50 INFO  ServiceLogAspect:37 - ====== 开始执行 class com.dreamshop.service.impl.CarouselServiceImpl.queryAll ======
-2020-01-02 21:21:50 INFO  ServiceLogAspect:55 - ====== 执行结束，耗时：73 毫秒 ======
-2020-01-02 21:21:50 INFO  ServiceLogAspect:55 - ====== 执行结束，耗时：73 毫秒 ======
-2020-01-02 21:21:50 INFO  ServiceLogAspect:37 - ====== 开始执行 class com.dreamshop.service.impl.CategoryServiceImpl.getSixNewItemsLazy ======
-2020-01-02 21:21:50 INFO  ServiceLogAspect:55 - ====== 执行结束，耗时：10 毫秒 ======
-2020-01-02 21:21:52 INFO  ServiceLogAspect:37 - ====== 开始执行 class com.dreamshop.service.impl.CategoryServiceImpl.getSixNewItemsLazy ======
-2020-01-02 21:21:52 INFO  ServiceLogAspect:55 - ====== 执行结束，耗时：5 毫秒 ======
-2020-01-02 21:21:52 INFO  ServiceLogAspect:37 - ====== 开始执行 class com.dreamshop.service.impl.CategoryServiceImpl.getSixNewItemsLazy ======
-2020-01-02 21:21:52 INFO  ServiceLogAspect:55 - ====== 执行结束，耗时：7 毫秒 ======
-2020-01-02 21:21:53 INFO  ServiceLogAspect:37 - ====== 开始执行 class com.dreamshop.service.impl.CategoryServiceImpl.getSixNewItemsLazy ======
-2020-01-02 21:21:53 INFO  ServiceLogAspect:55 - ====== 执行结束，耗时：6 毫秒 ======
-2020-01-02 21:21:53 INFO  ServiceLogAspect:37 - ====== 开始执行 class com.dreamshop.service.impl.CategoryServiceImpl.getSixNewItemsLazy ======
-2020-01-02 21:21:53 INFO  ServiceLogAspect:55 - ====== 执行结束，耗时：3 毫秒 ======
-2020-01-02 21:21:53 INFO  ServiceLogAspect:37 - ====== 开始执行 class com.dreamshop.service.impl.CategoryServiceImpl.getSixNewItemsLazy ======
-2020-01-02 21:21:53 INFO  ServiceLogAspect:55 - ====== 执行结束，耗时：4 毫秒 ======
-2020-01-02 21:21:53 INFO  ServiceLogAspect:37 - ====== 开始执行 class com.dreamshop.service.impl.CategoryServiceImpl.getSixNewItemsLazy ======
-2020-01-02 21:21:53 INFO  ServiceLogAspect:55 - ====== 执行结束，耗时：4 毫秒 ======
-2020-01-02 21:21:54 INFO  ServiceLogAspect:37 - ====== 开始执行 class com.dreamshop.service.impl.CategoryServiceImpl.getSixNewItemsLazy ======
-2020-01-02 21:21:54 INFO  ServiceLogAspect:55 - ====== 执行结束，耗时：5 毫秒 ======
-2020-01-02 21:21:55 INFO  ServiceLogAspect:37 - ====== 开始执行 class com.dreamshop.service.impl.CategoryServiceImpl.getSixNewItemsLazy ======
-2020-01-02 21:21:55 INFO  ServiceLogAspect:55 - ====== 执行结束，耗时：4 毫秒 ======
-2020-01-02 21:21:55 INFO  ServiceLogAspect:37 - ====== 开始执行 class com.dreamshop.service.impl.CategoryServiceImpl.getSixNewItemsLazy ======
-2020-01-02 21:21:55 INFO  ServiceLogAspect:55 - ====== 执行结束，耗时：10 毫秒 ======
-2020-01-02 21:28:53 INFO  Version:21 - HV000001: Hibernate Validator 6.0.16.Final
-2020-01-02 21:28:54 INFO  Application:50 - Starting Application on DESKTOP-9TJGKIL with PID 2964 (F:\study\project\dreamshop\dreamshop-api\target\classes started by DreamHeng in F:\study\project\dreamshop)
-2020-01-02 21:28:54 INFO  Application:679 - The following profiles are active: dev
-2020-01-02 21:28:55 WARN  ClassPathMapperScanner:44 - No MyBatis mapper was found in '[com.dreamshop]' package. Please check your configuration.
-2020-01-02 21:28:55 INFO  PostProcessorRegistrationDelegate$BeanPostProcessorChecker:330 - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$65b65fbd] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2020-01-02 21:28:56 INFO  TomcatWebServer:90 - Tomcat initialized with port(s): 8888 (http)
-2020-01-02 21:28:56 INFO  ContextLoader:296 - Root WebApplicationContext: initialization completed in 2281 ms
-2020-01-02 21:28:58 INFO  ThreadPoolTaskExecutor:171 - Initializing ExecutorService 'applicationTaskExecutor'
-2020-01-02 21:28:59 INFO  MapperCacheDisabler:60 - Clear tk.mybatis.mapper.util.MsUtil CLASS_CACHE cache.
-2020-01-02 21:28:59 INFO  MapperCacheDisabler:60 - Clear tk.mybatis.mapper.genid.GenIdUtil CACHE cache.
-2020-01-02 21:28:59 INFO  MapperCacheDisabler:60 - Clear tk.mybatis.mapper.version.VersionUtil CACHE cache.
-2020-01-02 21:28:59 INFO  MapperCacheDisabler:83 - Clear EntityHelper entityTableMap cache.
-2020-01-02 21:28:59 INFO  DocumentationPluginsBootstrapper:84 - Context refreshed
-2020-01-02 21:28:59 INFO  DocumentationPluginsBootstrapper:87 - Found 1 custom documentation plugin(s)
-2020-01-02 21:28:59 INFO  ApiListingReferenceScanner:44 - Scanning for api listing references
-2020-01-02 21:28:59 INFO  CachingOperationNameGenerator:40 - Generating unique operation named: catsUsingGET_1
-2020-01-02 21:28:59 WARN  OperationImplicitParameterReader:88 - Coercing to be of type string. This may not even be a scalar type in actuality
-2020-01-02 21:28:59 WARN  OperationImplicitParameterReader:88 - Coercing to be of type string. This may not even be a scalar type in actuality
-2020-01-02 21:28:59 WARN  OperationImplicitParameterReader:88 - Coercing to be of type string. This may not even be a scalar type in actuality
-2020-01-02 21:28:59 WARN  OperationImplicitParameterReader:88 - Coercing to be of type string. This may not even be a scalar type in actuality
-2020-01-02 21:28:59 WARN  OperationImplicitParameterReader:88 - Coercing to be of type string. This may not even be a scalar type in actuality
-2020-01-02 21:28:59 WARN  OperationImplicitParameterReader:88 - Coercing to be of type string. This may not even be a scalar type in actuality
-2020-01-02 21:28:59 WARN  OperationImplicitParameterReader:88 - Coercing to be of type string. This may not even be a scalar type in actuality
-2020-01-02 21:28:59 INFO  TomcatWebServer:204 - Tomcat started on port(s): 8888 (http) with context path ''
-2020-01-02 21:28:59 INFO  Application:59 - Started Application in 5.904 seconds (JVM running for 7.34)
-2020-01-02 21:29:06 INFO  DispatcherServlet:524 - Initializing Servlet 'dispatcherServlet'
-2020-01-02 21:29:06 INFO  DispatcherServlet:546 - Completed initialization in 13 ms
-2020-01-02 21:29:06 INFO  ServiceLogAspect:37 - ====== 开始执行 class com.dreamshop.service.impl.CarouselServiceImpl.queryAll ======
-2020-01-02 21:29:06 INFO  ServiceLogAspect:37 - ====== 开始执行 class com.dreamshop.service.impl.CategoryServiceImpl.queryAllRootLevelCat ======
-2020-01-02 21:29:06 INFO  HikariDataSource:110 - DateSourceHikariCP - Starting...
-2020-01-02 21:29:06 INFO  HikariDataSource:123 - DateSourceHikariCP - Start completed.
-2020-01-02 21:29:07 INFO  ServiceLogAspect:55 - ====== 执行结束，耗时：332 毫秒 ======
-2020-01-02 21:29:07 INFO  ServiceLogAspect:55 - ====== 执行结束，耗时：335 毫秒 ======
-2020-01-02 21:29:07 INFO  ServiceLogAspect:37 - ====== 开始执行 class com.dreamshop.service.impl.CategoryServiceImpl.getSixNewItemsLazy ======
-2020-01-02 21:29:07 INFO  ServiceLogAspect:55 - ====== 执行结束，耗时：14 毫秒 ======
-2020-01-02 21:29:28 INFO  ServiceLogAspect:37 - ====== 开始执行 class com.dreamshop.service.impl.CategoryServiceImpl.getSixNewItemsLazy ======
-2020-01-02 21:29:28 INFO  ServiceLogAspect:55 - ====== 执行结束，耗时：5 毫秒 ======
-2020-01-02 21:29:28 INFO  ServiceLogAspect:37 - ====== 开始执行 class com.dreamshop.service.impl.CategoryServiceImpl.getSixNewItemsLazy ======
-2020-01-02 21:29:28 INFO  ServiceLogAspect:55 - ====== 执行结束，耗时：8 毫秒 ======
-2020-01-02 21:29:32 INFO  ServiceLogAspect:37 - ====== 开始执行 class com.dreamshop.service.impl.CategoryServiceImpl.getSixNewItemsLazy ======
-2020-01-02 21:29:32 INFO  ServiceLogAspect:55 - ====== 执行结束，耗时：5 毫秒 ======
-2020-01-02 21:29:32 INFO  ServiceLogAspect:37 - ====== 开始执行 class com.dreamshop.service.impl.CategoryServiceImpl.getSixNewItemsLazy ======
-2020-01-02 21:29:32 INFO  ServiceLogAspect:55 - ====== 执行结束，耗时：5 毫秒 ======
-2020-01-02 21:29:32 INFO  ServiceLogAspect:37 - ====== 开始执行 class com.dreamshop.service.impl.CategoryServiceImpl.getSixNewItemsLazy ======
-2020-01-02 21:29:32 INFO  ServiceLogAspect:55 - ====== 执行结束，耗时：3 毫秒 ======
-2020-01-02 21:29:33 INFO  ServiceLogAspect:37 - ====== 开始执行 class com.dreamshop.service.impl.CategoryServiceImpl.getSixNewItemsLazy ======
-2020-01-02 21:29:33 INFO  ServiceLogAspect:55 - ====== 执行结束，耗时：5 毫秒 ======
-2020-01-02 21:29:33 INFO  ServiceLogAspect:37 - ====== 开始执行 class com.dreamshop.service.impl.CategoryServiceImpl.getSixNewItemsLazy ======
-2020-01-02 21:29:33 INFO  ServiceLogAspect:55 - ====== 执行结束，耗时：8 毫秒 ======
-2020-01-02 21:29:35 INFO  ServiceLogAspect:37 - ====== 开始执行 class com.dreamshop.service.impl.CategoryServiceImpl.getSixNewItemsLazy ======
-2020-01-02 21:29:35 INFO  ServiceLogAspect:55 - ====== 执行结束，耗时：5 毫秒 ======
-2020-01-02 21:29:35 INFO  ServiceLogAspect:37 - ====== 开始执行 class com.dreamshop.service.impl.CategoryServiceImpl.getSixNewItemsLazy ======
-2020-01-02 21:29:35 INFO  ServiceLogAspect:55 - ====== 执行结束，耗时：8 毫秒 ======
-2020-01-02 21:29:43 INFO  ServiceLogAspect:37 - ====== 开始执行 class com.dreamshop.service.impl.CarouselServiceImpl.queryAll ======
-2020-01-02 21:29:43 INFO  ServiceLogAspect:37 - ====== 开始执行 class com.dreamshop.service.impl.CategoryServiceImpl.queryAllRootLevelCat ======
-2020-01-02 21:29:43 INFO  ServiceLogAspect:55 - ====== 执行结束，耗时：4 毫秒 ======
-2020-01-02 21:29:43 INFO  ServiceLogAspect:55 - ====== 执行结束，耗时：5 毫秒 ======
-2020-01-02 21:29:43 INFO  ServiceLogAspect:37 - ====== 开始执行 class com.dreamshop.service.impl.CategoryServiceImpl.getSixNewItemsLazy ======
-2020-01-02 21:29:43 INFO  ServiceLogAspect:55 - ====== 执行结束，耗时：8 毫秒 ======
-2020-01-02 21:29:44 INFO  ServiceLogAspect:37 - ====== 开始执行 class com.dreamshop.service.impl.CategoryServiceImpl.getSixNewItemsLazy ======
-2020-01-02 21:29:44 INFO  ServiceLogAspect:55 - ====== 执行结束，耗时：13 毫秒 ======
-2020-01-02 21:29:45 INFO  ServiceLogAspect:37 - ====== 开始执行 class com.dreamshop.service.impl.CategoryServiceImpl.getSixNewItemsLazy ======
-2020-01-02 21:29:45 INFO  ServiceLogAspect:55 - ====== 执行结束，耗时：7 毫秒 ======
-2020-01-02 21:29:45 INFO  ServiceLogAspect:37 - ====== 开始执行 class com.dreamshop.service.impl.CategoryServiceImpl.getSixNewItemsLazy ======
-2020-01-02 21:29:45 INFO  ServiceLogAspect:55 - ====== 执行结束，耗时：4 毫秒 ======
-2020-01-02 21:29:55 INFO  ServiceLogAspect:37 - ====== 开始执行 class com.dreamshop.service.impl.CategoryServiceImpl.getSixNewItemsLazy ======
-2020-01-02 21:29:55 INFO  ServiceLogAspect:55 - ====== 执行结束，耗时：5 毫秒 ======
-2020-01-02 21:29:55 INFO  ServiceLogAspect:37 - ====== 开始执行 class com.dreamshop.service.impl.CategoryServiceImpl.getSixNewItemsLazy ======
-2020-01-02 21:29:55 INFO  ServiceLogAspect:55 - ====== 执行结束，耗时：6 毫秒 ======
-2020-01-02 21:30:00 INFO  ServiceLogAspect:37 - ====== 开始执行 class com.dreamshop.service.impl.CategoryServiceImpl.getSixNewItemsLazy ======
-2020-01-02 21:30:00 INFO  ServiceLogAspect:55 - ====== 执行结束，耗时：4 毫秒 ======
-2020-01-02 21:30:00 INFO  ServiceLogAspect:37 - ====== 开始执行 class com.dreamshop.service.impl.CategoryServiceImpl.getSixNewItemsLazy ======
-2020-01-02 21:30:00 INFO  ServiceLogAspect:55 - ====== 执行结束，耗时：9 毫秒 ======
-2020-01-02 21:30:52 INFO  ServiceLogAspect:37 - ====== 开始执行 class com.dreamshop.service.impl.CategoryServiceImpl.getSixNewItemsLazy ======
-2020-01-02 21:30:52 INFO  ServiceLogAspect:55 - ====== 执行结束，耗时：4 毫秒 ======
-2020-01-02 21:30:52 INFO  ServiceLogAspect:37 - ====== 开始执行 class com.dreamshop.service.impl.CategoryServiceImpl.getSixNewItemsLazy ======
-2020-01-02 21:30:52 INFO  ServiceLogAspect:55 - ====== 执行结束，耗时：5 毫秒 ======
-2020-01-02 21:31:46 INFO  ServiceLogAspect:37 - ====== 开始执行 class com.dreamshop.service.impl.CarouselServiceImpl.queryAll ======
-2020-01-02 21:31:46 INFO  ServiceLogAspect:37 - ====== 开始执行 class com.dreamshop.service.impl.CategoryServiceImpl.queryAllRootLevelCat ======
-2020-01-02 21:31:46 INFO  ServiceLogAspect:55 - ====== 执行结束，耗时：4 毫秒 ======
-2020-01-02 21:31:46 INFO  ServiceLogAspect:55 - ====== 执行结束，耗时：4 毫秒 ======
-2020-01-02 21:31:46 INFO  ServiceLogAspect:37 - ====== 开始执行 class com.dreamshop.service.impl.CategoryServiceImpl.getSixNewItemsLazy ======
-2020-01-02 21:31:46 INFO  ServiceLogAspect:55 - ====== 执行结束，耗时：5 毫秒 ======
-2020-01-02 21:31:46 INFO  ServiceLogAspect:37 - ====== 开始执行 class com.dreamshop.service.impl.CategoryServiceImpl.getSixNewItemsLazy ======
-2020-01-02 21:31:46 INFO  ServiceLogAspect:55 - ====== 执行结束，耗时：10 毫秒 ======
-2020-01-02 21:31:47 INFO  ServiceLogAspect:37 - ====== 开始执行 class com.dreamshop.service.impl.CategoryServiceImpl.getSixNewItemsLazy ======
-2020-01-02 21:31:47 INFO  ServiceLogAspect:55 - ====== 执行结束，耗时：3 毫秒 ======
-2020-01-02 21:31:49 INFO  ServiceLogAspect:37 - ====== 开始执行 class com.dreamshop.service.impl.CategoryServiceImpl.getSixNewItemsLazy ======
-2020-01-02 21:31:49 INFO  ServiceLogAspect:55 - ====== 执行结束，耗时：5 毫秒 ======
-2020-01-02 21:31:49 INFO  ServiceLogAspect:37 - ====== 开始执行 class com.dreamshop.service.impl.CategoryServiceImpl.getSixNewItemsLazy ======
-2020-01-02 21:31:49 INFO  ServiceLogAspect:55 - ====== 执行结束，耗时：4 毫秒 ======
-2020-01-02 21:31:51 INFO  ServiceLogAspect:37 - ====== 开始执行 class com.dreamshop.service.impl.CategoryServiceImpl.getSixNewItemsLazy ======
-2020-01-02 21:31:51 INFO  ServiceLogAspect:55 - ====== 执行结束，耗时：3 毫秒 ======
-2020-01-02 21:31:52 INFO  ServiceLogAspect:37 - ====== 开始执行 class com.dreamshop.service.impl.CategoryServiceImpl.getSixNewItemsLazy ======
-2020-01-02 21:31:52 INFO  ServiceLogAspect:55 - ====== 执行结束，耗时：3 毫秒 ======
-2020-01-02 21:31:52 INFO  ServiceLogAspect:37 - ====== 开始执行 class com.dreamshop.service.impl.CategoryServiceImpl.getSixNewItemsLazy ======
-2020-01-02 21:31:52 INFO  ServiceLogAspect:55 - ====== 执行结束，耗时：2 毫秒 ======
-2020-01-02 21:31:52 INFO  ServiceLogAspect:37 - ====== 开始执行 class com.dreamshop.service.impl.CategoryServiceImpl.getSixNewItemsLazy ======
-2020-01-02 21:31:52 INFO  ServiceLogAspect:55 - ====== 执行结束，耗时：4 毫秒 ======
-2020-01-02 21:31:52 INFO  ServiceLogAspect:37 - ====== 开始执行 class com.dreamshop.service.impl.CategoryServiceImpl.getSixNewItemsLazy ======
-2020-01-02 21:31:52 INFO  ServiceLogAspect:55 - ====== 执行结束，耗时：7 毫秒 ======
-2020-01-02 21:34:01 INFO  ServiceLogAspect:37 - ====== 开始执行 class com.dreamshop.service.impl.CarouselServiceImpl.queryAll ======
-2020-01-02 21:34:01 INFO  ServiceLogAspect:37 - ====== 开始执行 class com.dreamshop.service.impl.CategoryServiceImpl.queryAllRootLevelCat ======
-2020-01-02 21:34:01 INFO  ServiceLogAspect:55 - ====== 执行结束，耗时：19 毫秒 ======
-2020-01-02 21:34:01 INFO  ServiceLogAspect:55 - ====== 执行结束，耗时：19 毫秒 ======
-2020-01-02 21:34:01 INFO  ServiceLogAspect:37 - ====== 开始执行 class com.dreamshop.service.impl.CategoryServiceImpl.getSixNewItemsLazy ======
-2020-01-02 21:34:01 INFO  ServiceLogAspect:55 - ====== 执行结束，耗时：5 毫秒 ======
-2020-01-02 21:34:01 INFO  ServiceLogAspect:37 - ====== 开始执行 class com.dreamshop.service.impl.CategoryServiceImpl.getSixNewItemsLazy ======
-2020-01-02 21:34:01 INFO  ServiceLogAspect:55 - ====== 执行结束，耗时：8 毫秒 ======
-2020-01-02 21:34:14 INFO  ServiceLogAspect:37 - ====== 开始执行 class com.dreamshop.service.impl.CategoryServiceImpl.getSixNewItemsLazy ======
-2020-01-02 21:34:14 INFO  ServiceLogAspect:55 - ====== 执行结束，耗时：4 毫秒 ======
-2020-01-02 21:34:15 INFO  ServiceLogAspect:37 - ====== 开始执行 class com.dreamshop.service.impl.CategoryServiceImpl.getSixNewItemsLazy ======
-2020-01-02 21:34:15 INFO  ServiceLogAspect:55 - ====== 执行结束，耗时：3 毫秒 ======
-2020-01-02 21:34:15 INFO  ServiceLogAspect:37 - ====== 开始执行 class com.dreamshop.service.impl.CategoryServiceImpl.getSixNewItemsLazy ======
-2020-01-02 21:34:15 INFO  ServiceLogAspect:55 - ====== 执行结束，耗时：3 毫秒 ======
-2020-01-02 21:34:15 INFO  ServiceLogAspect:37 - ====== 开始执行 class com.dreamshop.service.impl.CategoryServiceImpl.getSixNewItemsLazy ======
-2020-01-02 21:34:15 INFO  ServiceLogAspect:55 - ====== 执行结束，耗时：4 毫秒 ======
-2020-01-02 21:34:15 INFO  ServiceLogAspect:37 - ====== 开始执行 class com.dreamshop.service.impl.CategoryServiceImpl.getSixNewItemsLazy ======
-2020-01-02 21:34:15 INFO  ServiceLogAspect:55 - ====== 执行结束，耗时：5 毫秒 ======
-2020-01-02 21:34:16 INFO  ServiceLogAspect:37 - ====== 开始执行 class com.dreamshop.service.impl.CategoryServiceImpl.getSixNewItemsLazy ======
-2020-01-02 21:34:16 INFO  ServiceLogAspect:55 - ====== 执行结束，耗时：3 毫秒 ======
-2020-01-02 21:34:16 INFO  ServiceLogAspect:37 - ====== 开始执行 class com.dreamshop.service.impl.CategoryServiceImpl.getSixNewItemsLazy ======
-2020-01-02 21:34:16 INFO  ServiceLogAspect:55 - ====== 执行结束，耗时：4 毫秒 ======
-2020-01-02 21:34:16 INFO  ServiceLogAspect:37 - ====== 开始执行 class com.dreamshop.service.impl.CategoryServiceImpl.getSixNewItemsLazy ======
-2020-01-02 21:34:16 INFO  ServiceLogAspect:55 - ====== 执行结束，耗时：4 毫秒 ======
-2020-01-02 21:34:59 INFO  ServiceLogAspect:37 - ====== 开始执行 class com.dreamshop.service.impl.CategoryServiceImpl.getSixNewItemsLazy ======
-2020-01-02 21:34:59 INFO  ServiceLogAspect:55 - ====== 执行结束，耗时：3 毫秒 ======
-2020-01-02 21:35:22 INFO  ServiceLogAspect:37 - ====== 开始执行 class com.dreamshop.service.impl.CategoryServiceImpl.getSixNewItemsLazy ======
-2020-01-02 21:35:22 INFO  ServiceLogAspect:55 - ====== 执行结束，耗时：8 毫秒 ======
-2020-01-02 21:35:42 INFO  ServiceLogAspect:37 - ====== 开始执行 class com.dreamshop.service.impl.CategoryServiceImpl.getSixNewItemsLazy ======
-2020-01-02 21:35:42 INFO  ServiceLogAspect:55 - ====== 执行结束，耗时：4 毫秒 ======
-2020-01-02 21:40:11 INFO  ServiceLogAspect:37 - ====== 开始执行 class com.dreamshop.service.impl.CategoryServiceImpl.getSixNewItemsLazy ======
-2020-01-02 21:40:11 INFO  ServiceLogAspect:55 - ====== 执行结束，耗时：4 毫秒 ======
-2020-01-02 21:40:47 INFO  Version:21 - HV000001: Hibernate Validator 6.0.16.Final
-2020-01-02 21:40:48 INFO  Application:50 - Starting Application on DESKTOP-9TJGKIL with PID 11596 (F:\study\project\dreamshop\dreamshop-api\target\classes started by DreamHeng in F:\study\project\dreamshop)
-2020-01-02 21:40:48 INFO  Application:679 - The following profiles are active: dev
-2020-01-02 21:40:49 WARN  ClassPathMapperScanner:44 - No MyBatis mapper was found in '[com.dreamshop]' package. Please check your configuration.
-2020-01-02 21:40:49 INFO  PostProcessorRegistrationDelegate$BeanPostProcessorChecker:330 - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$46f0fc53] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2020-01-02 21:40:50 INFO  TomcatWebServer:90 - Tomcat initialized with port(s): 8888 (http)
-2020-01-02 21:40:50 INFO  ContextLoader:296 - Root WebApplicationContext: initialization completed in 2045 ms
-2020-01-02 21:40:52 INFO  ThreadPoolTaskExecutor:171 - Initializing ExecutorService 'applicationTaskExecutor'
-2020-01-02 21:40:52 INFO  MapperCacheDisabler:60 - Clear tk.mybatis.mapper.util.MsUtil CLASS_CACHE cache.
-2020-01-02 21:40:52 INFO  MapperCacheDisabler:60 - Clear tk.mybatis.mapper.genid.GenIdUtil CACHE cache.
-2020-01-02 21:40:52 INFO  MapperCacheDisabler:60 - Clear tk.mybatis.mapper.version.VersionUtil CACHE cache.
-2020-01-02 21:40:52 INFO  MapperCacheDisabler:83 - Clear EntityHelper entityTableMap cache.
-2020-01-02 21:40:52 INFO  DocumentationPluginsBootstrapper:84 - Context refreshed
-2020-01-02 21:40:52 INFO  DocumentationPluginsBootstrapper:87 - Found 1 custom documentation plugin(s)
-2020-01-02 21:40:52 INFO  ApiListingReferenceScanner:44 - Scanning for api listing references
-2020-01-02 21:40:52 INFO  CachingOperationNameGenerator:40 - Generating unique operation named: catsUsingGET_1
-2020-01-02 21:40:52 WARN  OperationImplicitParameterReader:88 - Coercing to be of type string. This may not even be a scalar type in actuality
-2020-01-02 21:40:52 WARN  OperationImplicitParameterReader:88 - Coercing to be of type string. This may not even be a scalar type in actuality
-2020-01-02 21:40:52 WARN  OperationImplicitParameterReader:88 - Coercing to be of type string. This may not even be a scalar type in actuality
-2020-01-02 21:40:52 WARN  OperationImplicitParameterReader:88 - Coercing to be of type string. This may not even be a scalar type in actuality
-2020-01-02 21:40:53 WARN  OperationImplicitParameterReader:88 - Coercing to be of type string. This may not even be a scalar type in actuality
-2020-01-02 21:40:53 WARN  OperationImplicitParameterReader:88 - Coercing to be of type string. This may not even be a scalar type in actuality
-2020-01-02 21:40:53 WARN  OperationImplicitParameterReader:88 - Coercing to be of type string. This may not even be a scalar type in actuality
-2020-01-02 21:40:53 INFO  TomcatWebServer:204 - Tomcat started on port(s): 8888 (http) with context path ''
-2020-01-02 21:40:53 INFO  Application:59 - Started Application in 5.521 seconds (JVM running for 7.231)
-2020-01-02 21:40:56 INFO  DispatcherServlet:524 - Initializing Servlet 'dispatcherServlet'
-2020-01-02 21:40:56 INFO  DispatcherServlet:546 - Completed initialization in 15 ms
-2020-01-02 21:41:00 INFO  ServiceLogAspect:37 - ====== 开始执行 class com.dreamshop.service.impl.CategoryServiceImpl.getSixNewItemsLazy ======
-2020-01-02 21:41:00 INFO  HikariDataSource:110 - DateSourceHikariCP - Starting...
-2020-01-02 21:41:01 INFO  HikariDataSource:123 - DateSourceHikariCP - Start completed.
-2020-01-02 21:41:01 INFO  ServiceLogAspect:55 - ====== 执行结束，耗时：1536 毫秒 ======
-2020-01-02 21:41:50 INFO  ServiceLogAspect:37 - ====== 开始执行 class com.dreamshop.service.impl.CategoryServiceImpl.getSixNewItemsLazy ======
-2020-01-02 21:42:28 ERROR ServiceLogAspect:51 - ====== 执行结束，耗时：37274 毫秒 ======
-2020-01-02 21:42:54 INFO  ThreadPoolTaskExecutor:208 - Shutting down ExecutorService 'applicationTaskExecutor'
-2020-01-02 21:42:54 INFO  HikariDataSource:350 - DateSourceHikariCP - Shutdown initiated...
-2020-01-02 21:42:54 INFO  HikariDataSource:352 - DateSourceHikariCP - Shutdown completed.
-2020-01-02 21:43:00 INFO  Version:21 - HV000001: Hibernate Validator 6.0.16.Final
-2020-01-02 21:43:01 INFO  Application:50 - Starting Application on DESKTOP-9TJGKIL with PID 12948 (F:\study\project\dreamshop\dreamshop-api\target\classes started by DreamHeng in F:\study\project\dreamshop)
-2020-01-02 21:43:01 INFO  Application:679 - The following profiles are active: dev
-2020-01-02 21:43:02 WARN  ClassPathMapperScanner:44 - No MyBatis mapper was found in '[com.dreamshop]' package. Please check your configuration.
-2020-01-02 21:43:02 INFO  PostProcessorRegistrationDelegate$BeanPostProcessorChecker:330 - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$888773aa] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2020-01-02 21:43:03 INFO  TomcatWebServer:90 - Tomcat initialized with port(s): 8888 (http)
-2020-01-02 21:43:03 INFO  ContextLoader:296 - Root WebApplicationContext: initialization completed in 2184 ms
-2020-01-02 21:43:05 INFO  ThreadPoolTaskExecutor:171 - Initializing ExecutorService 'applicationTaskExecutor'
-2020-01-02 21:43:05 INFO  MapperCacheDisabler:60 - Clear tk.mybatis.mapper.util.MsUtil CLASS_CACHE cache.
-2020-01-02 21:43:05 INFO  MapperCacheDisabler:60 - Clear tk.mybatis.mapper.genid.GenIdUtil CACHE cache.
-2020-01-02 21:43:05 INFO  MapperCacheDisabler:60 - Clear tk.mybatis.mapper.version.VersionUtil CACHE cache.
-2020-01-02 21:43:05 INFO  MapperCacheDisabler:83 - Clear EntityHelper entityTableMap cache.
-2020-01-02 21:43:05 INFO  DocumentationPluginsBootstrapper:84 - Context refreshed
-2020-01-02 21:43:05 INFO  DocumentationPluginsBootstrapper:87 - Found 1 custom documentation plugin(s)
-2020-01-02 21:43:05 INFO  ApiListingReferenceScanner:44 - Scanning for api listing references
-2020-01-02 21:43:06 INFO  CachingOperationNameGenerator:40 - Generating unique operation named: catsUsingGET_1
-2020-01-02 21:43:06 WARN  OperationImplicitParameterReader:88 - Coercing to be of type string. This may not even be a scalar type in actuality
-2020-01-02 21:43:06 WARN  OperationImplicitParameterReader:88 - Coercing to be of type string. This may not even be a scalar type in actuality
-2020-01-02 21:43:06 WARN  OperationImplicitParameterReader:88 - Coercing to be of type string. This may not even be a scalar type in actuality
-2020-01-02 21:43:06 WARN  OperationImplicitParameterReader:88 - Coercing to be of type string. This may not even be a scalar type in actuality
-2020-01-02 21:43:06 WARN  OperationImplicitParameterReader:88 - Coercing to be of type string. This may not even be a scalar type in actuality
-2020-01-02 21:43:06 WARN  OperationImplicitParameterReader:88 - Coercing to be of type string. This may not even be a scalar type in actuality
-2020-01-02 21:43:06 WARN  OperationImplicitParameterReader:88 - Coercing to be of type string. This may not even be a scalar type in actuality
-2020-01-02 21:43:06 INFO  TomcatWebServer:204 - Tomcat started on port(s): 8888 (http) with context path ''
-2020-01-02 21:43:06 INFO  Application:59 - Started Application in 6.05 seconds (JVM running for 7.774)
-2020-01-02 21:43:10 INFO  DispatcherServlet:524 - Initializing Servlet 'dispatcherServlet'
-2020-01-02 21:43:10 INFO  DispatcherServlet:546 - Completed initialization in 19 ms
-2020-01-02 21:43:10 INFO  ServiceLogAspect:37 - ====== 开始执行 class com.dreamshop.service.impl.CategoryServiceImpl.getSixNewItemsLazy ======
-2020-01-02 21:43:14 INFO  HikariDataSource:110 - DateSourceHikariCP - Starting...
-2020-01-02 21:43:15 INFO  HikariDataSource:123 - DateSourceHikariCP - Start completed.
-2020-01-02 21:46:32 ERROR ServiceLogAspect:51 - ====== 执行结束，耗时：202430 毫秒 ======
-2020-01-02 21:46:32 WARN  HikariPool:766 - DateSourceHikariCP - Thread starvation or clock leap detected (housekeeper delta=3m17s666ms603µs984ns).
-2020-01-02 21:46:32 INFO  ThreadPoolTaskExecutor:208 - Shutting down ExecutorService 'applicationTaskExecutor'
-2020-01-02 21:46:32 INFO  HikariDataSource:350 - DateSourceHikariCP - Shutdown initiated...
-2020-01-02 21:46:32 INFO  HikariDataSource:352 - DateSourceHikariCP - Shutdown completed.
-2020-01-02 21:47:33 INFO  Version:21 - HV000001: Hibernate Validator 6.0.16.Final
-2020-01-02 21:47:34 INFO  Application:50 - Starting Application on DESKTOP-9TJGKIL with PID 8256 (F:\study\project\dreamshop\dreamshop-api\target\classes started by DreamHeng in F:\study\project\dreamshop)
-2020-01-02 21:47:34 INFO  Application:679 - The following profiles are active: dev
-2020-01-02 21:47:35 WARN  ClassPathMapperScanner:44 - No MyBatis mapper was found in '[com.dreamshop]' package. Please check your configuration.
-2020-01-02 21:47:35 INFO  PostProcessorRegistrationDelegate$BeanPostProcessorChecker:330 - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$2363729c] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2020-01-02 21:47:36 INFO  TomcatWebServer:90 - Tomcat initialized with port(s): 8888 (http)
-2020-01-02 21:47:36 INFO  ContextLoader:296 - Root WebApplicationContext: initialization completed in 1918 ms
-2020-01-02 21:47:38 INFO  ThreadPoolTaskExecutor:171 - Initializing ExecutorService 'applicationTaskExecutor'
-2020-01-02 21:47:38 INFO  MapperCacheDisabler:60 - Clear tk.mybatis.mapper.util.MsUtil CLASS_CACHE cache.
-2020-01-02 21:47:38 INFO  MapperCacheDisabler:60 - Clear tk.mybatis.mapper.genid.GenIdUtil CACHE cache.
-2020-01-02 21:47:38 INFO  MapperCacheDisabler:60 - Clear tk.mybatis.mapper.version.VersionUtil CACHE cache.
-2020-01-02 21:47:38 INFO  MapperCacheDisabler:83 - Clear EntityHelper entityTableMap cache.
-2020-01-02 21:47:38 INFO  DocumentationPluginsBootstrapper:84 - Context refreshed
-2020-01-02 21:47:38 INFO  DocumentationPluginsBootstrapper:87 - Found 1 custom documentation plugin(s)
-2020-01-02 21:47:38 INFO  ApiListingReferenceScanner:44 - Scanning for api listing references
-2020-01-02 21:47:38 INFO  CachingOperationNameGenerator:40 - Generating unique operation named: catsUsingGET_1
-2020-01-02 21:47:38 WARN  OperationImplicitParameterReader:88 - Coercing to be of type string. This may not even be a scalar type in actuality
-2020-01-02 21:47:38 WARN  OperationImplicitParameterReader:88 - Coercing to be of type string. This may not even be a scalar type in actuality
-2020-01-02 21:47:38 WARN  OperationImplicitParameterReader:88 - Coercing to be of type string. This may not even be a scalar type in actuality
-2020-01-02 21:47:38 WARN  OperationImplicitParameterReader:88 - Coercing to be of type string. This may not even be a scalar type in actuality
-2020-01-02 21:47:38 WARN  OperationImplicitParameterReader:88 - Coercing to be of type string. This may not even be a scalar type in actuality
-2020-01-02 21:47:38 WARN  OperationImplicitParameterReader:88 - Coercing to be of type string. This may not even be a scalar type in actuality
-2020-01-02 21:47:38 WARN  OperationImplicitParameterReader:88 - Coercing to be of type string. This may not even be a scalar type in actuality
-2020-01-02 21:47:38 INFO  TomcatWebServer:204 - Tomcat started on port(s): 8888 (http) with context path ''
-2020-01-02 21:47:38 INFO  Application:59 - Started Application in 4.921 seconds (JVM running for 6.37)
-2020-01-02 21:47:45 INFO  DispatcherServlet:524 - Initializing Servlet 'dispatcherServlet'
-2020-01-02 21:47:45 INFO  DispatcherServlet:546 - Completed initialization in 16 ms
-2020-01-02 21:47:45 INFO  ServiceLogAspect:37 - ====== 开始执行 class com.dreamshop.service.impl.CategoryServiceImpl.getSixNewItemsLazy ======
-2020-01-02 21:47:45 INFO  HikariDataSource:110 - DateSourceHikariCP - Starting...
-2020-01-02 21:47:45 INFO  HikariDataSource:123 - DateSourceHikariCP - Start completed.
-2020-01-02 21:47:45 INFO  ServiceLogAspect:55 - ====== 执行结束，耗时：269 毫秒 ======
-2020-01-02 21:47:51 INFO  ServiceLogAspect:37 - ====== 开始执行 class com.dreamshop.service.impl.CategoryServiceImpl.queryAllRootLevelCat ======
-2020-01-02 21:47:51 INFO  ServiceLogAspect:37 - ====== 开始执行 class com.dreamshop.service.impl.CarouselServiceImpl.queryAll ======
-2020-01-02 21:47:51 INFO  ServiceLogAspect:55 - ====== 执行结束，耗时：82 毫秒 ======
-2020-01-02 21:47:51 INFO  ServiceLogAspect:55 - ====== 执行结束，耗时：82 毫秒 ======
-2020-01-02 21:47:52 INFO  ServiceLogAspect:37 - ====== 开始执行 class com.dreamshop.service.impl.CategoryServiceImpl.getSixNewItemsLazy ======
-2020-01-02 21:47:52 INFO  ServiceLogAspect:55 - ====== 执行结束，耗时：5 毫秒 ======
-2020-01-02 21:47:52 INFO  ServiceLogAspect:37 - ====== 开始执行 class com.dreamshop.service.impl.CategoryServiceImpl.getSixNewItemsLazy ======
-2020-01-02 21:47:52 INFO  ServiceLogAspect:55 - ====== 执行结束，耗时：14 毫秒 ======
-2020-01-02 21:47:56 INFO  ServiceLogAspect:37 - ====== 开始执行 class com.dreamshop.service.impl.CategoryServiceImpl.getSixNewItemsLazy ======
-2020-01-02 21:47:56 INFO  ServiceLogAspect:55 - ====== 执行结束，耗时：5 毫秒 ======
-2020-01-02 21:47:56 INFO  ServiceLogAspect:37 - ====== 开始执行 class com.dreamshop.service.impl.CategoryServiceImpl.getSixNewItemsLazy ======
-2020-01-02 21:47:56 INFO  ServiceLogAspect:55 - ====== 执行结束，耗时：7 毫秒 ======
-2020-01-02 21:47:57 INFO  ServiceLogAspect:37 - ====== 开始执行 class com.dreamshop.service.impl.CategoryServiceImpl.getSixNewItemsLazy ======
-2020-01-02 21:47:57 INFO  ServiceLogAspect:55 - ====== 执行结束，耗时：4 毫秒 ======
-2020-01-02 21:47:57 INFO  ServiceLogAspect:37 - ====== 开始执行 class com.dreamshop.service.impl.CategoryServiceImpl.getSixNewItemsLazy ======
-2020-01-02 21:47:57 INFO  ServiceLogAspect:55 - ====== 执行结束，耗时：4 毫秒 ======
-2020-01-02 21:47:57 INFO  ServiceLogAspect:37 - ====== 开始执行 class com.dreamshop.service.impl.CategoryServiceImpl.getSixNewItemsLazy ======
-2020-01-02 21:47:57 INFO  ServiceLogAspect:55 - ====== 执行结束，耗时：3 毫秒 ======
-2020-01-02 21:47:57 INFO  ServiceLogAspect:37 - ====== 开始执行 class com.dreamshop.service.impl.CategoryServiceImpl.getSixNewItemsLazy ======
-2020-01-02 21:47:57 INFO  ServiceLogAspect:55 - ====== 执行结束，耗时：3 毫秒 ======
-2020-01-02 21:47:58 INFO  ServiceLogAspect:37 - ====== 开始执行 class com.dreamshop.service.impl.CategoryServiceImpl.getSixNewItemsLazy ======
-2020-01-02 21:47:58 INFO  ServiceLogAspect:55 - ====== 执行结束，耗时：4 毫秒 ======
-2020-01-02 21:47:58 INFO  ServiceLogAspect:37 - ====== 开始执行 class com.dreamshop.service.impl.CategoryServiceImpl.getSixNewItemsLazy ======
-2020-01-02 21:47:58 INFO  ServiceLogAspect:55 - ====== 执行结束，耗时：4 毫秒 ======
+2020-01-02 22:25:52 INFO  Version:21 - HV000001: Hibernate Validator 6.0.16.Final
+2020-01-02 22:25:53 INFO  Application:50 - Starting Application on DESKTOP-9TJGKIL with PID 7308 (F:\study\project\dreamshop\dreamshop-api\target\classes started by DreamHeng in F:\study\project\dreamshop)
+2020-01-02 22:25:53 INFO  Application:679 - The following profiles are active: dev
+2020-01-02 22:25:55 WARN  ClassPathMapperScanner:44 - No MyBatis mapper was found in '[com.dreamshop]' package. Please check your configuration.
+2020-01-02 22:25:55 INFO  PostProcessorRegistrationDelegate$BeanPostProcessorChecker:330 - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$73aaa42e] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-01-02 22:25:56 INFO  TomcatWebServer:90 - Tomcat initialized with port(s): 8888 (http)
+2020-01-02 22:25:56 INFO  ContextLoader:296 - Root WebApplicationContext: initialization completed in 2931 ms
+2020-01-02 22:25:58 INFO  ThreadPoolTaskExecutor:171 - Initializing ExecutorService 'applicationTaskExecutor'
+2020-01-02 22:25:58 INFO  MapperCacheDisabler:60 - Clear tk.mybatis.mapper.util.MsUtil CLASS_CACHE cache.
+2020-01-02 22:25:58 INFO  MapperCacheDisabler:60 - Clear tk.mybatis.mapper.genid.GenIdUtil CACHE cache.
+2020-01-02 22:25:58 INFO  MapperCacheDisabler:60 - Clear tk.mybatis.mapper.version.VersionUtil CACHE cache.
+2020-01-02 22:25:58 INFO  MapperCacheDisabler:83 - Clear EntityHelper entityTableMap cache.
+2020-01-02 22:25:58 INFO  DocumentationPluginsBootstrapper:84 - Context refreshed
+2020-01-02 22:25:58 INFO  DocumentationPluginsBootstrapper:87 - Found 1 custom documentation plugin(s)
+2020-01-02 22:25:58 INFO  ApiListingReferenceScanner:44 - Scanning for api listing references
+2020-01-02 22:25:58 INFO  CachingOperationNameGenerator:40 - Generating unique operation named: catsUsingGET_1
+2020-01-02 22:25:58 WARN  OperationImplicitParameterReader:88 - Coercing to be of type string. This may not even be a scalar type in actuality
+2020-01-02 22:25:58 WARN  OperationImplicitParameterReader:88 - Coercing to be of type string. This may not even be a scalar type in actuality
+2020-01-02 22:25:58 WARN  OperationImplicitParameterReader:88 - Coercing to be of type string. This may not even be a scalar type in actuality
+2020-01-02 22:25:58 WARN  OperationImplicitParameterReader:88 - Coercing to be of type string. This may not even be a scalar type in actuality
+2020-01-02 22:25:58 WARN  OperationImplicitParameterReader:88 - Coercing to be of type string. This may not even be a scalar type in actuality
+2020-01-02 22:25:58 WARN  OperationImplicitParameterReader:88 - Coercing to be of type string. This may not even be a scalar type in actuality
+2020-01-02 22:25:58 WARN  OperationImplicitParameterReader:88 - Coercing to be of type string. This may not even be a scalar type in actuality
+2020-01-02 22:25:58 INFO  TomcatWebServer:204 - Tomcat started on port(s): 8888 (http) with context path ''
+2020-01-02 22:25:58 INFO  Application:59 - Started Application in 6.268 seconds (JVM running for 7.698)
+2020-01-02 22:26:11 INFO  DispatcherServlet:524 - Initializing Servlet 'dispatcherServlet'
+2020-01-02 22:26:11 INFO  DispatcherServlet:546 - Completed initialization in 13 ms
+2020-01-02 22:26:11 INFO  ServiceLogAspect:37 - ====== 开始执行 class com.dreamshop.service.impl.CarouselServiceImpl.queryAll ======
+2020-01-02 22:26:11 INFO  ServiceLogAspect:37 - ====== 开始执行 class com.dreamshop.service.impl.CategoryServiceImpl.queryAllRootLevelCat ======
+2020-01-02 22:26:11 INFO  HikariDataSource:110 - DateSourceHikariCP - Starting...
+2020-01-02 22:26:11 INFO  HikariDataSource:123 - DateSourceHikariCP - Start completed.
+2020-01-02 22:26:11 INFO  ServiceLogAspect:55 - ====== 执行结束，耗时：320 毫秒 ======
+2020-01-02 22:26:11 INFO  ServiceLogAspect:55 - ====== 执行结束，耗时：326 毫秒 ======
+2020-01-02 22:26:12 INFO  ServiceLogAspect:37 - ====== 开始执行 class com.dreamshop.service.impl.CategoryServiceImpl.getSixNewItemsLazy ======
+2020-01-02 22:26:12 INFO  ServiceLogAspect:55 - ====== 执行结束，耗时：35 毫秒 ======
+2020-01-02 22:26:13 INFO  ServiceLogAspect:37 - ====== 开始执行 class com.dreamshop.service.impl.CategoryServiceImpl.getSixNewItemsLazy ======
+2020-01-02 22:26:13 INFO  ServiceLogAspect:55 - ====== 执行结束，耗时：5 毫秒 ======
+2020-01-02 22:26:13 INFO  ServiceLogAspect:37 - ====== 开始执行 class com.dreamshop.service.impl.CategoryServiceImpl.getSixNewItemsLazy ======
+2020-01-02 22:26:13 INFO  ServiceLogAspect:55 - ====== 执行结束，耗时：8 毫秒 ======
+2020-01-02 22:26:14 INFO  ServiceLogAspect:37 - ====== 开始执行 class com.dreamshop.service.impl.CategoryServiceImpl.getSubCatList ======
+2020-01-02 22:26:14 INFO  ServiceLogAspect:55 - ====== 执行结束，耗时：11 毫秒 ======
+2020-01-02 22:26:14 INFO  ServiceLogAspect:37 - ====== 开始执行 class com.dreamshop.service.impl.CategoryServiceImpl.getSubCatList ======
+2020-01-02 22:26:14 INFO  ServiceLogAspect:55 - ====== 执行结束，耗时：7 毫秒 ======
+2020-01-02 22:26:14 INFO  ServiceLogAspect:37 - ====== 开始执行 class com.dreamshop.service.impl.CategoryServiceImpl.getSubCatList ======
+2020-01-02 22:26:14 INFO  ServiceLogAspect:55 - ====== 执行结束，耗时：6 毫秒 ======
+2020-01-02 22:26:14 INFO  ServiceLogAspect:37 - ====== 开始执行 class com.dreamshop.service.impl.CategoryServiceImpl.getSubCatList ======
+2020-01-02 22:26:14 INFO  ServiceLogAspect:55 - ====== 执行结束，耗时：6 毫秒 ======
+2020-01-02 22:26:14 INFO  ServiceLogAspect:37 - ====== 开始执行 class com.dreamshop.service.impl.CategoryServiceImpl.getSubCatList ======
+2020-01-02 22:26:14 INFO  ServiceLogAspect:55 - ====== 执行结束，耗时：7 毫秒 ======
+2020-01-02 22:26:16 INFO  ServiceLogAspect:37 - ====== 开始执行 class com.dreamshop.service.impl.ItemServiceImpl.queryItemById ======
+2020-01-02 22:26:16 INFO  ServiceLogAspect:55 - ====== 执行结束，耗时：53 毫秒 ======
+2020-01-02 22:26:16 INFO  ServiceLogAspect:37 - ====== 开始执行 class com.dreamshop.service.impl.ItemServiceImpl.queryItemImgList ======
+2020-01-02 22:26:16 INFO  ServiceLogAspect:55 - ====== 执行结束，耗时：3 毫秒 ======
+2020-01-02 22:26:16 INFO  ServiceLogAspect:37 - ====== 开始执行 class com.dreamshop.service.impl.ItemServiceImpl.queryItemSpecList ======
+2020-01-02 22:26:16 INFO  ServiceLogAspect:55 - ====== 执行结束，耗时：14 毫秒 ======
+2020-01-02 22:26:16 INFO  ServiceLogAspect:37 - ====== 开始执行 class com.dreamshop.service.impl.ItemServiceImpl.queryItemParams ======
+2020-01-02 22:26:16 INFO  ServiceLogAspect:55 - ====== 执行结束，耗时：10 毫秒 ======
