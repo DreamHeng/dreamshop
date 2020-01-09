@@ -1,6 +1,8 @@
 package com.dreamshop.service;
 
 import com.dreamshop.pojo.*;
+import com.dreamshop.pojo.vo.CommentLevelCountsVO;
+import com.dreamshop.util.PagedGridResult;
 
 import java.util.List;
 
@@ -36,4 +38,23 @@ public interface ItemService {
      * @return
      */
     ItemsParam queryItemParams(String itemId);
+
+    /**
+     * function:根据商品id查询商品的评价等级数量
+     * @param itemId
+     * @return
+     */
+    CommentLevelCountsVO queryCommentCounts(String itemId);
+
+    /**
+     * function:根据商品id查询商品评价（分页）
+     * @param itemId
+     * @param level
+     * @param page
+     * @param size
+     * @return
+     */
+    PagedGridResult queryPagedComments(String itemId, Integer level,
+                                       Integer page, Integer size);
+
 }

@@ -1,20 +1,23 @@
 package com.dreamshop.service.impl;
 
-import com.dreamshop.mapper.ItemsImgMapper;
-import com.dreamshop.mapper.ItemsMapper;
-import com.dreamshop.mapper.ItemsParamMapper;
-import com.dreamshop.mapper.ItemsSpecMapper;
-import com.dreamshop.pojo.Items;
-import com.dreamshop.pojo.ItemsImg;
-import com.dreamshop.pojo.ItemsParam;
-import com.dreamshop.pojo.ItemsSpec;
+import com.dreamshop.enums.CommentLevelEnum;
+import com.dreamshop.mapper.*;
+import com.dreamshop.pojo.*;
+import com.dreamshop.pojo.vo.CommentLevelCountsVO;
+import com.dreamshop.pojo.vo.ItemCommentVO;
 import com.dreamshop.service.ItemService;
+import com.dreamshop.util.DesensitizationUtil;
+import com.dreamshop.util.PagedGridResult;
+import com.github.pagehelper.PageHelper;
+import com.github.pagehelper.PageInfo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 /**
  * @author DreamHeng
@@ -30,6 +33,10 @@ public class ItemServiceImpl implements ItemService {
     private ItemsSpecMapper itemsSpecMapper;
     @Autowired
     private ItemsParamMapper itemsParamMapper;
+    @Autowired
+    private ItemsCommentsMapper itemsCommentsMapper;
+    @Autowired
+    private ItemsMapperCustom itemsMapperCustom;
 
     @Transactional(propagation = Propagation.SUPPORTS)
     @Override
@@ -60,4 +67,58 @@ public class ItemServiceImpl implements ItemService {
         itemsParam.setItemId(itemId);
         return itemsParamMapper.selectOne(itemsParam);
     }
+
+    @Transactional(propagation = Propagation.SUPPORTS)
+    @Override
+    public CommentLevelCountsVO queryCommentCounts(String itemId) {
+        Integer goodCount = queryCommentLevelCounts(itemId, CommentLevelEnum.GOOD.type);
+        Integer normalCount = queryCommentLevelCounts(itemId, CommentLevelEnum.NORMAL.type);
+        Integer badCount = queryCommentLevelCounts(itemId,CommentLevelEnum.BAD.type);
+        Integer totalCount = goodCount + normalCount + badCount;
+        CommentLevelCountsVO commentLevelCountsVO = new CommentLevelCountsVO();
+        commentLevelCountsVO.setTotalCounts(totalCount);
+        commentLevelCountsVO.setGoodCounts(goodCount);
+        commentLevelCountsVO.setNormalCounts(normalCount);
+        commentLevelCountsVO.setBadCounts(badCount);
+        return commentLevelCountsVO;
+    }
+
+    @Override
+    public PagedGridResult queryPagedComments(String itemId, Integer level, Integer page, Integer size) {
+        Map map = new HashMap();
+        map.put("itemId", itemId);
+        map.put("level", level);
+
+        //页码，页容量
+        PageHelper.startPage(page,size);
+
+        List<ItemCommentVO> itemComments = itemsMapperCustom.queryItemComments(map);
+        for(ItemCommentVO vo : itemComments){
+            vo.setNickname(DesensitizationUtil.commonDisplay(vo.getNickname()));
+        }
+
+        return setterPagedGrid(itemComments,page);
+    }
+
+    @Transactional(propagation = Propagation.SUPPORTS)
+    PagedGridResult setterPagedGrid(List<?> list, Integer page) {
+        PageInfo<?> pageList = new PageInfo<>(list);
+        PagedGridResult grid = new PagedGridResult();
+        grid.setPage(page);
+        grid.setRows(list);
+        grid.setTotal(pageList.getPages());
+        grid.setRecords(pageList.getTotal());
+        return grid;
+    }
+
+    @Transactional(propagation = Propagation.SUPPORTS)
+    Integer queryCommentLevelCounts(String itemId, Integer level){
+        ItemsComments itemsComments = new ItemsComments();
+        itemsComments.setItemId(itemId);
+        if(level != null){
+            itemsComments.setCommentLevel(level);
+        }
+        return itemsCommentsMapper.selectCount(itemsComments);
+    }
+
 }
