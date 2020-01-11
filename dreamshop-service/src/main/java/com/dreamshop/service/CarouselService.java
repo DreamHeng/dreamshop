@@ -10,10 +10,11 @@ import java.util.List;
  */
 public interface CarouselService {
 
+
     /**
-     * function:查询所有轮播图
+     * function:获取所有轮播图
      * @param isShow
-     * @return
+     * @return java.util.List<com.dreamshop.pojo.Carousel>
      */
     List<Carousel> queryAll(Integer isShow);
 

@@ -14,7 +14,8 @@ public interface CategoryService {
 
     /**
      * function:查询所有一级分类
-     * @return
+     * @param
+     * @return java.util.List<com.dreamshop.pojo.Category>
      */
     List<Category> queryAllRootLevelCat();
 

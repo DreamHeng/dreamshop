@@ -52,9 +52,31 @@ public interface ItemService {
      * @param level
      * @param page
      * @param size
-     * @return
+     * @return com.dreamshop.util.PagedGridResult
      */
     PagedGridResult queryPagedComments(String itemId, Integer level,
                                        Integer page, Integer size);
+
+    /**
+     * function:搜索商品列表
+     * @param keywords
+     * @param sort
+     * @param page
+     * @param pageSize
+     * @return com.dreamshop.util.PagedGridResult
+     */
+    PagedGridResult searchItems(String keywords, String sort,
+                               Integer page, Integer pageSize);
+
+    /**
+     * function:根据分类id搜索商品列表
+     * @param catId
+     * @param sort
+     * @param page
+     * @param pageSize
+     * @return com.dreamshop.util.PagedGridResult
+     */
+    PagedGridResult searchItems(Integer catId, String sort,
+                               Integer page, Integer pageSize);
 
 }

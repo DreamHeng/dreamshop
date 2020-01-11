@@ -5,6 +5,7 @@ import com.dreamshop.mapper.*;
 import com.dreamshop.pojo.*;
 import com.dreamshop.pojo.vo.CommentLevelCountsVO;
 import com.dreamshop.pojo.vo.ItemCommentVO;
+import com.dreamshop.pojo.vo.SearchItemsVO;
 import com.dreamshop.service.ItemService;
 import com.dreamshop.util.DesensitizationUtil;
 import com.dreamshop.util.PagedGridResult;
@@ -83,6 +84,7 @@ public class ItemServiceImpl implements ItemService {
         return commentLevelCountsVO;
     }
 
+    @Transactional(propagation = Propagation.SUPPORTS)
     @Override
     public PagedGridResult queryPagedComments(String itemId, Integer level, Integer page, Integer size) {
         Map map = new HashMap();
@@ -98,6 +100,32 @@ public class ItemServiceImpl implements ItemService {
         }
 
         return setterPagedGrid(itemComments,page);
+    }
+
+    @Transactional(propagation = Propagation.SUPPORTS)
+    @Override
+    public PagedGridResult searchItems(String keywords, String sort, Integer page, Integer pageSize) {
+        Map<String, Object> map = new HashMap<>();
+        map.put("keywords", keywords);
+        map.put("sort", sort);
+
+        PageHelper.startPage(page, pageSize);
+        List<SearchItemsVO> list = itemsMapperCustom.searchItems(map);
+
+        return setterPagedGrid(list, page);
+    }
+
+    @Transactional(propagation = Propagation.SUPPORTS)
+    @Override
+    public PagedGridResult searchItems(Integer catId, String sort, Integer page, Integer pageSize) {
+        Map<String, Object> map = new HashMap<>();
+        map.put("catId", catId);
+        map.put("sort", sort);
+
+        PageHelper.startPage(page, pageSize);
+        List<SearchItemsVO> list = itemsMapperCustom.searchItemsByThirdCat(map);
+
+        return setterPagedGrid(list, page);
     }
 
     @Transactional(propagation = Propagation.SUPPORTS)
