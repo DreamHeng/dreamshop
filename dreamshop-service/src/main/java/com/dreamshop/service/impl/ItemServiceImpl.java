@@ -6,6 +6,7 @@ import com.dreamshop.pojo.*;
 import com.dreamshop.pojo.vo.CommentLevelCountsVO;
 import com.dreamshop.pojo.vo.ItemCommentVO;
 import com.dreamshop.pojo.vo.SearchItemsVO;
+import com.dreamshop.pojo.vo.ShopcatVO;
 import com.dreamshop.service.ItemService;
 import com.dreamshop.util.DesensitizationUtil;
 import com.dreamshop.util.PagedGridResult;
@@ -16,9 +17,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
 
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 /**
  * @author DreamHeng
@@ -126,6 +125,22 @@ public class ItemServiceImpl implements ItemService {
         List<SearchItemsVO> list = itemsMapperCustom.searchItemsByThirdCat(map);
 
         return setterPagedGrid(list, page);
+    }
+
+    @Transactional(propagation = Propagation.SUPPORTS)
+    @Override
+    public List<ShopcatVO> queryItemsBySpecIds(String specIds) {
+        String ids[] = specIds.split(",");
+        List<String> specIdsList = new ArrayList<>();
+        Collections.addAll(specIdsList, ids);
+
+        return itemsMapperCustom.queryItemsBySpecIds(specIdsList);
+    }
+
+    @Transactional(propagation = Propagation.SUPPORTS)
+    @Override
+    public ItemsSpec queryItemSpecById(String specId) {
+        return itemsSpecMapper.selectByPrimaryKey(specId);
     }
 
     @Transactional(propagation = Propagation.SUPPORTS)

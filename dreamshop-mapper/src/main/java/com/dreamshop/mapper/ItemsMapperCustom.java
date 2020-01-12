@@ -2,6 +2,7 @@ package com.dreamshop.mapper;
 
 import com.dreamshop.pojo.vo.ItemCommentVO;
 import com.dreamshop.pojo.vo.SearchItemsVO;
+import com.dreamshop.pojo.vo.ShopcatVO;
 import org.apache.ibatis.annotations.Param;
 
 import java.util.List;
@@ -18,4 +19,6 @@ public interface ItemsMapperCustom {
     List<SearchItemsVO> searchItems(@Param("paramsMap") Map<String, Object> map);
 
     List<SearchItemsVO> searchItemsByThirdCat(@Param("paramsMap") Map<String, Object> map);
+
+    List<ShopcatVO> queryItemsBySpecIds(@Param("paramsList") List specIdsList);
 }

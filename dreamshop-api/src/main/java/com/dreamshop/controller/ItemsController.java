@@ -6,6 +6,7 @@ import com.dreamshop.pojo.ItemsParam;
 import com.dreamshop.pojo.ItemsSpec;
 import com.dreamshop.pojo.vo.CommentLevelCountsVO;
 import com.dreamshop.pojo.vo.ItemInfoVO;
+import com.dreamshop.pojo.vo.ShopcatVO;
 import com.dreamshop.service.ItemService;
 import com.dreamshop.util.DreamJSONResult;
 import com.dreamshop.util.PagedGridResult;
@@ -161,7 +162,21 @@ public class ItemsController extends BaseController{
         return DreamJSONResult.ok(grid);
     }
 
+    // 用于用户长时间未登录网站，刷新购物车中的数据（主要是商品价格），类似京东淘宝
+    @ApiOperation(value = "根据商品规格ids查找最新的商品数据", notes = "根据商品规格ids查找最新的商品数据", httpMethod = "GET")
+    @GetMapping("/refresh")
+    public DreamJSONResult refresh(
+            @ApiParam(name = "itemSpecIds", value = "拼接的规格ids", required = true, example = "1001,1003,1005")
+            @RequestParam String itemSpecIds) {
 
+        if (StringUtils.isBlank(itemSpecIds)) {
+            return DreamJSONResult.ok();
+        }
+
+        List<ShopcatVO> list = itemService.queryItemsBySpecIds(itemSpecIds);
+
+        return DreamJSONResult.ok(list);
+    }
 
 
 }

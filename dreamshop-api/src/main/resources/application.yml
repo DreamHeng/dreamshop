@@ -52,3 +52,7 @@ mapper:
   mappers: com.dreamshop.my.mapper.MyMapper
   not-empty: false    # 在进行数据库操作时，判断name!=null，后边追加name!=""，尽量不要开启
   identity: MYSQL
+# 分页插件配置
+pagehelper:
+  helper-dialect: mysql
+  support-methods-arguments: true

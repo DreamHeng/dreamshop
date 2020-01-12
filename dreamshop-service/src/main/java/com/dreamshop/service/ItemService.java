@@ -2,6 +2,7 @@ package com.dreamshop.service;
 
 import com.dreamshop.pojo.*;
 import com.dreamshop.pojo.vo.CommentLevelCountsVO;
+import com.dreamshop.pojo.vo.ShopcatVO;
 import com.dreamshop.util.PagedGridResult;
 
 import java.util.List;
@@ -79,4 +80,17 @@ public interface ItemService {
     PagedGridResult searchItems(Integer catId, String sort,
                                Integer page, Integer pageSize);
 
+    /**
+     * function:根据规格ids查询最新的购物车中商品数据（用于刷新渲染购物车中的商品数据）
+     * @param specIds
+     * @return java.util.List<com.dreamshop.pojo.vo.ShopcatVO>
+     */
+    List<ShopcatVO> queryItemsBySpecIds(String specIds);
+
+    /**
+     * function:根据商品规格id获取规格对象的具体信息
+     * @param specId
+     * @return com.dreamshop.pojo.ItemsSpec
+     */
+    ItemsSpec queryItemSpecById(String specId);
 }
