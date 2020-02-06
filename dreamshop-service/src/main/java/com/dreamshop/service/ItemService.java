@@ -93,4 +93,19 @@ public interface ItemService {
      * @return com.dreamshop.pojo.ItemsSpec
      */
     ItemsSpec queryItemSpecById(String specId);
+
+    /**
+     * function: 根据图片id获得商品主图url
+     * @param itemId
+     * @return java.lang.String
+     */
+    String queryItemMainImgById(String itemId);
+
+    /**
+     * function: 根据商品id扣除商品库存
+     * @param itemSpecId
+     * @param buyCounts
+     * @return void
+     */
+    void decreaseItemSpecStock(String itemSpecId, int buyCounts);
 }

@@ -1,20 +1,20 @@
 package com.dreamshop.enums;
 
 /**
- * function: 是否枚举类
+ * function: 支付方式枚举
+ *
  * @author DreamHeng
- * @date 2020/01/01
+ * @date 2020/2/3
  */
-public enum BooleanEnum {
-    //否
-    NO(0,"否"),
-    //是
-    YES(1,"是");
+public enum PayMethodEnum {
+
+    WEIXIN(1, "微信"),
+    ALIPAY(2, "支付宝");
 
     public final Integer type;
     public final String value;
 
-    BooleanEnum(Integer type, String value) {
+    PayMethodEnum(Integer type, String value){
         this.type = type;
         this.value = value;
     }

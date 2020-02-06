@@ -38,7 +38,7 @@ public class IndexController {
     @ApiOperation(value = "获取首页轮播图列表", notes = "获取首页轮播图列表", httpMethod = "GET")
     @GetMapping("/carousel")
     public DreamJSONResult carousel(){
-        List<Carousel> carousels = carouselService.queryAll(BooleanEnum.YES.tye);
+        List<Carousel> carousels = carouselService.queryAll(BooleanEnum.YES.type);
         return DreamJSONResult.ok(carousels);
     }
 
