@@ -25,4 +25,11 @@ public interface OrderService {
      * @return void
      */
     void updateOrderStatus(String merchantOrderId, Integer status);
+
+    /**
+     * function: 定时关闭未支付订单
+     * @param
+     * @return void
+     */
+    void closeOrder();
 }
