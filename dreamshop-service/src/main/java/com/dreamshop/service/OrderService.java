@@ -17,4 +17,12 @@ public interface OrderService {
      * @return com.dreamshop.pojo.vo.OrderVO
      */
     OrderVO createOrder(SubmitOrderBO submitOrderBO);
+
+    /**
+     * function: 根据订单id修改订单状态
+     * @param merchantOrderId
+     * @param status
+     * @return void
+     */
+    void updateOrderStatus(String merchantOrderId, Integer status);
 }

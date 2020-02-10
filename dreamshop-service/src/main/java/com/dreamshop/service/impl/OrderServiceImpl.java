@@ -147,4 +147,15 @@ public class OrderServiceImpl implements OrderService {
 
         return orderVO;
     }
+
+    @Transactional(propagation = Propagation.REQUIRED)
+    @Override
+    public void updateOrderStatus(String merchantOrderId, Integer status) {
+        OrderStatus paidStatus = new OrderStatus();
+        paidStatus.setOrderId(merchantOrderId);
+        paidStatus.setOrderStatus(status);
+        paidStatus.setPayTime(new Date());
+
+        orderStatusMapper.updateByPrimaryKeySelective(paidStatus);
+    }
 }

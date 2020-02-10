@@ -1,5 +1,6 @@
 package com.dreamshop.controller;
 
+import com.dreamshop.enums.OrderStatusEnum;
 import com.dreamshop.enums.PayMethodEnum;
 import com.dreamshop.pojo.bo.SubmitOrderBO;
 import com.dreamshop.pojo.vo.MerchantOrdersVO;
@@ -23,6 +24,7 @@ import org.springframework.web.client.RestTemplate;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import java.util.Date;
 
 /**
  * function:dreamshop
@@ -40,8 +42,8 @@ public class OrdersController extends BaseController{
     @Autowired
     private OrderService orderService;
 
-    /*@Autowired
-    private RestTemplate restTemplate;*/
+    @Autowired
+    private RestTemplate restTemplate;
 
     @ApiOperation(value = "用户下单", notes = "用户下单", httpMethod = "POST")
     @PostMapping("/create")
@@ -55,11 +57,8 @@ public class OrdersController extends BaseController{
             return DreamJSONResult.errorMsg("支付方式不支持！");
         }
 
-//        System.out.println(submitOrderBO.toString());
-
         // 1. 创建订单
         OrderVO orderVO = orderService.createOrder(submitOrderBO);
-        System.out.println(orderVO);
         String orderId = orderVO.getOrderId();
 
         // 2. 创建订单以后，移除购物车中已结算（已提交）的商品
@@ -72,6 +71,7 @@ public class OrdersController extends BaseController{
         // TODO 整合redis之后，完善购物车中的已结算商品清除，并且同步到前端的cookie
 //        CookieUtils.setCookie(request, response, FOODIE_SHOPCART, "", true);
 
+        // TODO 待集成支付中心模块，目前为直接转为支付成功,下3
         /*// 3. 向支付中心发送当前订单，用于保存支付中心的订单数据
         MerchantOrdersVO merchantOrdersVO = orderVO.getMerchantOrdersVO();
         merchantOrdersVO.setReturnUrl(payReturnUrl);
@@ -97,7 +97,17 @@ public class OrdersController extends BaseController{
             return DreamJSONResult.errorMsg("支付中心订单创建失败，请联系管理员！");
         }*/
 
+        long times = new Date().getSeconds();
+        if((times%2)==0){
+            mockPay(orderId,OrderStatusEnum.WAIT_DELIVER.type);
+        }else{
+            mockPay(orderId,OrderStatusEnum.WAIT_PAY.type);
+        }
         return DreamJSONResult.ok(orderId);
+    }
+
+    public void mockPay(String merchantOrderId, Integer status){
+        orderService.updateOrderStatus(merchantOrderId, status);
     }
 
 
