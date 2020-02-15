@@ -16,7 +16,7 @@ import tk.mybatis.spring.annotation.MapperScan;
 //默认扫描com.dreamshop  添加扫描工具包
 @ComponentScan(basePackages = {"com.dreamshop","org.n3r.idworker"})
 //开启定时任务
-@EnableScheduling
+//@EnableScheduling
 public class Application {
     public static void main(String[] args) {
         SpringApplication.run(Application.class,args);
