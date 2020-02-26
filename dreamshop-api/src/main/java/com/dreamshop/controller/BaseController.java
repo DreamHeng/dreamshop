@@ -1,6 +1,10 @@
 package com.dreamshop.controller;
 
+import com.dreamshop.pojo.Orders;
+import com.dreamshop.service.center.MyOrdersService;
+import com.dreamshop.util.DreamJSONResult;
 import com.dreamshop.util.JsonUtils;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 
 import java.io.File;
@@ -24,4 +28,20 @@ public class BaseController {
     // 微信支付成功 -> 支付中心 -> 天天吃货平台
     //                       |-> 回调通知的url
     String payReturnUrl = "http://api.z.mukewang.com/foodie-dev-api/orders/notifyMerchantOrderPaid";
+
+    @Autowired
+    public MyOrdersService myOrdersService;
+
+    /**
+     * 用于验证用户和订单是否有关联关系，避免非法用户调用
+     * @return
+     */
+    public DreamJSONResult checkUserOrder(String userId, String orderId) {
+        Orders order = myOrdersService.queryMyOrder(userId, orderId);
+        if (order == null) {
+            return DreamJSONResult.errorMsg("订单不存在！");
+        }
+        return DreamJSONResult.ok(order);
+    }
+
 }
