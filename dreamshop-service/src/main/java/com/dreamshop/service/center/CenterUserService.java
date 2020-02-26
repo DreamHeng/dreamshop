@@ -25,4 +25,12 @@ public interface CenterUserService {
      * @return com.dreamshop.pojo.Users
      */
     Users updateUserInfo(String userId, CenterUserBO centerUserBO);
+
+    /**
+     * function: 修改用户头像到数据库中
+     * @param userId
+     * @param finalUserFaceUrl
+     * @return com.dreamshop.pojo.Users
+     */
+    Users updateUserFace(String userId, String finalUserFaceUrl);
 }
