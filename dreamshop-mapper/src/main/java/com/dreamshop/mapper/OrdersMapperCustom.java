@@ -14,10 +14,10 @@ import java.util.Map;
  * @date 2020/2/26
  */
 public interface OrdersMapperCustom {
-    public List<MyOrdersVO> queryMyOrders(@Param("paramsMap") Map<String, Object> map);
+    List<MyOrdersVO> queryMyOrders(@Param("paramsMap") Map<String, Object> map);
 
-    public int getMyOrderStatusCounts(@Param("paramsMap") Map<String, Object> map);
+    int getMyOrderStatusCounts(@Param("paramsMap") Map<String, Object> map);
 
-    public List<OrderStatus> getMyOrderTrend(@Param("paramsMap") Map<String, Object> map);
+    List<OrderStatus> getMyOrderTrend(@Param("paramsMap") Map<String, Object> map);
 
 }

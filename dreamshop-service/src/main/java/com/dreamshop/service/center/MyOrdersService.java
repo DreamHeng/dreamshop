@@ -58,4 +58,13 @@ public interface MyOrdersService {
      * @return boolean
      */
     boolean deleteOrder(String userId, String orderId);
+
+    /**
+     * function: 根据用户id查询订单动向，分页
+     * @param userId
+     * @param page
+     * @param pageSize
+     * @return com.dreamshop.util.PagedGridResult
+     */
+    PagedGridResult getOrdersTrend(String userId, Integer page, Integer pageSize);
 }
