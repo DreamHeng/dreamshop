@@ -28,7 +28,7 @@ public class PassportController {
 
     @ApiOperation(value = "用户名是否存在", notes = "用户名是否存在", httpMethod = "GET")
     @ApiImplicitParam(name="username",value="用户名",dataType="String", paramType = "path", required = true)
-    @GetMapping("/checkUsernameIsExist")
+    @GetMapping("/usernameIsExist")
     public DreamJSONResult checkUsernameIsExist(@RequestParam String username){
         //1.判断用户名是否为空
         if (StringUtils.isBlank(username)){
